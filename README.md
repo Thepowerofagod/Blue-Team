@@ -48,3 +48,6 @@ Anonymous Email
 - mail2tor 
 - More: https://www.reddit.com/r/onions/comments/6krt34/list_of_onion_email_providers/
 
+XMPP Servers
+- https://gist.github.com/dllud/a46d4a555e31dfeff6ad41dcf20729ac
+
