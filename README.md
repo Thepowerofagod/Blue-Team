@@ -4,3 +4,12 @@
 
 # Blue-Team
 Cyber defense tools and techniques
+
+## GPG 
+Source: 
+https://gnupg.org/download/  
+Windows  
+- https://www.gpg4win.org/   
+ 
+Mac  
+- https://gpgtools.org/  
