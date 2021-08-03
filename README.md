@@ -51,3 +51,10 @@ Anonymous Email
 XMPP Servers
 - https://gist.github.com/dllud/a46d4a555e31dfeff6ad41dcf20729ac
 
+BTC Mixers:
+- https://bitcoin-laundry.com/
+- https://bitmix.biz/en 
+- https://mixtum.io/ 
+
+Crypto Exchange:
+- https://www.morphtoken.com/
