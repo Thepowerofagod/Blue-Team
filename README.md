@@ -13,3 +13,21 @@ Windows
  
 Mac  
 - https://gpgtools.org/  
+
+## Dark Net
+Dark Net Search Engines:  
+- duckduckgo.com
+- NotEvil  
+- torch 
+- ahmia 
+
+Dark Net Listings:  
+- hidden wiki 
+- dark.fail - PGP verifies links  
+- deep web subredit: https://www.reddit.com/r/deepweb/  
+- onions sub reddit - https://www.reddit.com/r/onions/  
+
+Dark Net Others:  
+- hidden answers answerstedhctbek.onion  
+- dread - reddit http://dreadditevelidot.onion/  
+- privacy sub reddit - https://www.reddit.com/r/privacy/  
