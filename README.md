@@ -31,3 +31,12 @@ Dark Net Others:
 - hidden answers answerstedhctbek.onion  
 - dread - reddit http://dreadditevelidot.onion/  
 - privacy sub reddit - https://www.reddit.com/r/privacy/  
+
+Fake ID:  
+- https://www.elfqrin.com/fakeid.php
+
+Temp Mail:  
+- https://www.guerrillamail.com/
+- https://tempmailaddress.com
+
+Huge list of other providers - https://gist.github.com/michenriksen/8710649
