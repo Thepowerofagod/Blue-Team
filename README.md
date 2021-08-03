@@ -38,5 +38,13 @@ Fake ID:
 Temp Mail:  
 - https://www.guerrillamail.com/
 - https://tempmailaddress.com
+- Huge list of other providers - https://gist.github.com/michenriksen/8710649
 
-Huge list of other providers - https://gist.github.com/michenriksen/8710649
+Anonymous Email
+- Proton Mail - https://protonmail.com/ 
+- elude 
+- torbox 
+- Riseup
+- mail2tor 
+- More: https://www.reddit.com/r/onions/comments/6krt34/list_of_onion_email_providers/
+
