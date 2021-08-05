@@ -12,6 +12,7 @@ Some of the tools (open-source and commercial) that utilize Osquery are listed b
  
 Performant endpoint visibility:
 - https://osquery.io/
+- https://github.com/teoseller/osquery-attck
 
 Query multiple endpoints from the Kolide Fleet UI
 - https://www.kolide.com/
