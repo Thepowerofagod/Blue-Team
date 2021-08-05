@@ -24,6 +24,12 @@ Query multiple endpoints from the Kolide Fleet UI
 ### Host base Firewall
 ### Network base Firewall
 
+## Firefox Extensions
+- uBlock Origin
+  - I am an advanced user
+     - Block 3rd-party frames
+  - Prevent WebRTC from leaking local IP addresses
+  - Add more Filters
 ## GPG 
 Source: 
 https://gnupg.org/download/  
