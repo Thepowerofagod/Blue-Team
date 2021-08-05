@@ -5,6 +5,24 @@
 # Blue-Team
 Cyber defense tools and techniques
 
+## Osquery
+Some of the tools (open-source and commercial) that utilize Osquery are listed below.
+- https://otx.alienvault.com/endpoint-security/welcome  
+- https://orbital.amp.cisco.com/help/ 
+ 
+Performant endpoint visibility:
+- https://osquery.io/
+
+Query multiple endpoints from the Kolide Fleet UI
+- https://www.kolide.com/
+- https://github.com/fleetdm/fleet
+
+## Sandboxing
+
+## Firewall
+### Host base Firewall
+### Network base Firewall
+
 ## GPG 
 Source: 
 https://gnupg.org/download/  
