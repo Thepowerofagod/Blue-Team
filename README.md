@@ -37,6 +37,7 @@ Query multiple endpoints from the Kolide Fleet UI
 ### Network base Firewall
 
 ## Firefox Extensions
+- HTTPS Everywhere
 - uBlock Origin
   - I am an advanced user
      - Block 3rd-party frames
