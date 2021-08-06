@@ -39,6 +39,10 @@ Windows
 Mac  
 - https://gpgtools.org/  
 
+## Email Aliases
+- username@protonmail.com > username+wedding@protonmail.com
+- johndoe@gmail.com > j.o.h.n.d.o.e@gmail.com > j.o.h.n.d.o.e+youtube@gmail.com
+
 ## Dark Net
 Dark Net Search Engines:  
 - duckduckgo.com
