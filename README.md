@@ -49,7 +49,11 @@ This interactive brute force search space calculator
 - https://www.grc.com/haystack.htm
 
 ## 2FA
+Soft Tokens
 - https://authy.com/
+
+Hard Tokens
+- https://www.yubico.com/
 
 ## Email Aliases (. and +)
 - username@protonmail.com > u.s.e.r.name@protonmail.com > u.s.e.r.name+wedding@protonmail.com
