@@ -39,8 +39,8 @@ Windows
 Mac  
 - https://gpgtools.org/  
 
-## Email Aliases
-- username@protonmail.com > username+wedding@protonmail.com
+## Email Aliases (. and +)
+- username@protonmail.com > u.s.e.r.name@protonmail.com > u.s.e.r.name+wedding@protonmail.com
 - johndoe@gmail.com > j.o.h.n.d.o.e@gmail.com > j.o.h.n.d.o.e+youtube@gmail.com
 
 ## Dark Net
