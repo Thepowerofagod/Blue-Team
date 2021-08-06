@@ -18,6 +18,16 @@ Query multiple endpoints from the Kolide Fleet UI
 - https://www.kolide.com/
 - https://github.com/fleetdm/fleet
 
+## Secure Router
+- Disable WPS
+- Disable UPnp
+- Disable DMZ
+- Disable any Port Forwarding
+- Update Router’s Firmware
+- Use a complex WPA2 password
+- Change routers login password
+- Add MAC filtering
+
 ## Sandboxing
 
 ## Firewall
@@ -29,7 +39,9 @@ Query multiple endpoints from the Kolide Fleet UI
   - I am an advanced user
      - Block 3rd-party frames
   - Prevent WebRTC from leaking local IP addresses
-  - Add more Filters
+  - Add more Filters 
+- uMatrix
+- No-script
 ## GPG 
 Source: 
 https://gnupg.org/download/  
