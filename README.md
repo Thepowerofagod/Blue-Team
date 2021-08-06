@@ -39,6 +39,15 @@ Windows
 Mac  
 - https://gpgtools.org/  
 
+## Password Manager
+- https://masterpassword.app/
+- https://keepass.info/
+- https://keepassxc.org/
+- https://www.lastpass.com/
+
+This interactive brute force search space calculator
+- https://www.grc.com/haystack.htm
+
 ## Email Aliases (. and +)
 - username@protonmail.com > u.s.e.r.name@protonmail.com > u.s.e.r.name+wedding@protonmail.com
 - johndoe@gmail.com > j.o.h.n.d.o.e@gmail.com > j.o.h.n.d.o.e+youtube@gmail.com
