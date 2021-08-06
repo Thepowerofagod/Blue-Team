@@ -47,6 +47,7 @@ Mac
 
 This interactive brute force search space calculator
 - https://www.grc.com/haystack.htm
+- https://lowe.github.io/tryzxcvbn/
 
 ## 2FA
 Soft Tokens
