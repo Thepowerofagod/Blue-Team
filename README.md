@@ -37,7 +37,7 @@ Query multiple endpoints from the Kolide Fleet UI
 ### Network base Firewall
 
 ## Anti-Virus and End-Point-Protection
--Comparatives
+- Comparatives
     - https://www.av-comparatives.org/
     - https://www.av-test.org/
 - Windows
