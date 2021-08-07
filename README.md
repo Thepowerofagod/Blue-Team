@@ -45,14 +45,28 @@ Query multiple endpoints from the Kolide Fleet UI
   - Add more Filters 
 - uMatrix
 - No-script
-## GPG 
-Source: 
-https://gnupg.org/download/  
-Windows  
-- https://www.gpg4win.org/   
- 
-Mac  
-- https://gpgtools.org/  
+
+## Encryption
+- Full Disk Encryption
+  - Windows
+     - https://www.veracrypt.fr/en/Home.html
+     - BitLocker
+  - Mac
+    - Filevault2
+  - Linux
+    - Dm-crypt and LUKS
+    - Encrypting the boot partition with Grub2
+
+- Containers, Partition, USBs
+  - https://www.veracrypt.fr/en/Home.html
+
+- Files
+  - (Windows, Linux) https://peazip.github.io/
+  - (Mac) https://www.keka.io/en/
+  - https://www.aescrypt.com/
+  - GPG : https://gnupg.org/download/
+     - Windows : https://www.gpg4win.org/   
+     - Mac : https://gpgtools.org/  
 
 ## Password Manager
 - https://masterpassword.app/
