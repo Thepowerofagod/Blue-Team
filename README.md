@@ -5,6 +5,11 @@
 # Blue-Team
 Cyber defense tools and techniques
 
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/87951795/128604224-d694357c-f8e3-4493-a850-d7ae000dff20.png" alt="animated" />
+</p>
+
+
 ## Osquery
 Some of the tools (open-source and commercial) that utilize Osquery are listed below.
 - https://otx.alienvault.com/endpoint-security/welcome  
