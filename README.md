@@ -36,6 +36,28 @@ Query multiple endpoints from the Kolide Fleet UI
 ### Host base Firewall
 ### Network base Firewall
 
+## Anti-Virus and End-Point-Protection
+-Comparatives
+    - https://www.av-comparatives.org/
+    - https://www.av-test.org/
+- Windows
+    - https://www.bitdefender.com/
+    - https://www.kaspersky.es/
+    - https://norton.com
+    - https://www.malwarebytes.com/
+    - Aditional:
+       - https://www.hitmanpro.com/
+       - https://www.herdprotect.com/
+- Mac
+    - https://www.bitdefender.com/
+    - https://www.kaspersky.es/
+    - https://norton.com
+    - https://www.malwarebytes.com/
+- Linux
+    - Linux Security Review 2015: https://www.av-comparatives.org/wp-content/uploads/2015/05/avc_linux_2015_en.pdf
+    - Linux malware Wiki: https://en.wikipedia.org/wiki/Linux_malware
+    - https://www.rfxn.com/
+
 ## Firefox Extensions
 - HTTPS Everywhere
 - uBlock Origin
