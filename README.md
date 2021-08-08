@@ -52,6 +52,14 @@ docker run -d -p 443:443 --name openvas mikesplain/openvas
 Navigate to https://127.0.0.1 
 User: Admin, Password: Admin
 ```
+## Application and Execution Control
+- Windows
+- Mac
+- Linux (Security frameworks)
+  - AppArmor
+  - SElinux
+  - Grsecurity
+
 ## Sandboxing
 
 ## Firewall
