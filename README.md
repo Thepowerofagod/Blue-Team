@@ -76,6 +76,10 @@ All methods to preven the execution of malicious code on the endpoint. Things li
   - Grsecurity
 
 ## Sandboxing
+- Windows 
+- Mac
+- Linux
+- Use Firefox in custom VM whit Apparmor and Firejail (amnesic or roll back the snapshot)
 
 ## Firewall
 Many firewalls are configured to simply drop incoming packets. Nmap sends a TCP SYN request, and receives nothing back. This indicates that the port is being protected by a firewall and thus the port is considered to be filtered.
