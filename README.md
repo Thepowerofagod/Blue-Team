@@ -35,6 +35,23 @@ Query multiple endpoints from the Kolide Fleet UI
   - Change routers login password
   - Add MAC filtering
 
+## Vulnerability Scanner
+- Nessus: https://www.tenable.com/products/nessus/nessus-essentials
+- OpenVAS: 
+    - Option 1: Install from Kali/OpenVAS repositories:
+      - https://websiteforstudents.com/how-to-install-and-configure-openvas-on-ubuntu-18-04-16-04/
+      - https://www.agix.com.au/installing-openvas-on-kali-in-2020/
+    - Option 2: Install from Source:
+      - https://github.com/greenbone/openvas-scanner/blob/master/INSTALL.md
+    - Option 3: Run from Docker (Preferred):
+      - https://github.com/mikesplain/openvas-docker
+      - https://hub.docker.com/r/mikesplain/openvas/dockerfile
+```
+apt install docker.io
+docker run -d -p 443:443 --name openvas mikesplain/openvas
+Navigate to https://127.0.0.1 
+User: Admin, Password: Admin
+```
 ## Sandboxing
 
 ## Firewall
