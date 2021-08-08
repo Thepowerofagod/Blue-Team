@@ -55,6 +55,13 @@ User: Admin, Password: Admin
 ## Sandboxing
 
 ## Firewall
+Many firewalls are configured to simply drop incoming packets. Nmap sends a TCP SYN request, and receives nothing back. This indicates that the port is being protected by a firewall and thus the port is considered to be filtered.
+That said, it is very easy to configure a firewall to respond with a RST TCP packet. For example, in IPtables for Linux, a simple version of the command would be as follows:
+```
+iptables -I INPUT -p tcp --dport <port> -j REJECT --reject-with tcp-reset
+```
+This can make it extremely difficult (if not impossible) to get an accurate reading of the target(s).
+
 ### Host base Firewall
 ### Network base Firewall
 
