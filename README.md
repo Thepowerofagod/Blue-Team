@@ -53,8 +53,18 @@ Navigate to https://127.0.0.1
 User: Admin, Password: Admin
 ```
 ## Application and Execution Control
+All methods to preven the execution of malicious code on the endpoint. Things like Access Control ACLS, application white lists, anti executionsoftware AV or end point protection application controls, UAC, digital signatures, reputation systems, parental controls, software restriction policies and so on.
 - Windows
+    - Application control
+    - Exploitation Prevention
+      - EMET
+      - MALWAREBYTES MBAE
+      - PALOALTO TRAPS
+      - HITMAN PRO ALERT (Best)
 - Mac
+    - https://github.com/google/santa
+    - More from Google: https://github.com/google/macops
+    - More Apps: https://objective-see.com
 - Linux (Security frameworks)
   - AppArmor
   - SElinux
