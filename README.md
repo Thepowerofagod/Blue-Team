@@ -35,6 +35,21 @@ Query multiple endpoints from the Kolide Fleet UI
   - Change routers login password
   - Add MAC filtering
 
+## Network Isolation
+-dd-wrt.com
+-pfSense
+
+Keep IOT divices on separate fisical logical or wifi network
+switches have what is called isolated collision domains which is a fancy way to say that you can sniff the traffic on the network with a switch because traffic only gets forwarded to the correct physical Lamport based on the mac address.
+So the first thing to consider is having separate routable networks for different devices of different levels of trust. this could be implemented via your router, firewall, switch and wifi access point.
+- 192.168.1.0/24
+- 192.168.2.0/24
+- 192.168.3.0/24
+- 192.168.4.0/24
+You could as an example in this connect this directly via a ethernet cable physically into your router and or firewall depending on what it is you're using and assign it its own network like we have here
+VLAN:
+Another option of these villans that you can see here villans virtual LANs. 1These are commonly used to isolate networks villans are the logical separation of networks instead of physical. And they use tags included in the packets that are sent between the devices on the network in order to determine that they are separate
+
 ## Vulnerability Scanner
 - Nessus: https://www.tenable.com/products/nessus/nessus-essentials
 - OpenVAS: 
