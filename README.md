@@ -34,7 +34,6 @@ Query multiple endpoints from the Kolide Fleet UI
   - Use a complex WPA2 personal password whit CCMP(AES) or CBC-MAC algorithm
   - Use Not common network name (SSID)
   - Change routers login password
-  - Add MAC filtering
   - Enabling AP Isolation
   - Having separate Wi-Fi networks for devices of a different trust levels. SSID1, SSID2...
 
