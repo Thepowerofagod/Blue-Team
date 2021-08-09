@@ -38,6 +38,10 @@ Query multiple endpoints from the Kolide Fleet UI
   - Having separate Wi-Fi networks for devices of a different trust levels. SSID1, SSID2...
 
 ## Network Isolation
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/87951795/128722827-340adba9-2709-4ed7-9c38-02dfdac285ad.png" alt="animated" />
+</p>
+
 -dd-wrt.com
 -pfSense
 
