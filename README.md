@@ -234,3 +234,13 @@ BTC Mixers:
 
 Crypto Exchange:
 - https://www.morphtoken.com/
+
+Core Windows Processes  
+Task Manager  
+Process Hacker  
+Process Explorer  
+
+Sysinternals
+https://docs.microsoft.com/en-us/sysinternals/downloads/
+
+
