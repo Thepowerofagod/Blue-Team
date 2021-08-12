@@ -143,7 +143,11 @@ These canary tokens can alert you if something or someone is trying to look thro
 
 Add Email and Description
 Select: DNS/HTTP or Browser Scanner(Show more info)
-Generate Token
+Generate Token: Web bugs 
+thunderbird > New Email > Insert Image > insert the web bug (change the ending to something like image.gif), don´t atach and dont use alternate text.
+Add Value data from the example to the email: https://www.stationx.net/canarytokens/
+Add more traps in the email like email adreses or links
+Add SMTP Token (Trap Emails) to data base.
 
 ## Firefox Extensions
 - HTTPS Everywhere
