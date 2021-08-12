@@ -63,12 +63,13 @@ or sent out through to other systems, such as simply via email or through to a f
 - Ossec which again can be used as a intrusion detection system and more, also has file integrity monitoring and is multiplatform Windows, Mac and Linux.
 - Tripwire: https://github.com/Tripwire/tripwire-open-source
 - https://eljefe.immunityinc.com/  
-Linux FIMs
-- https://linux-audit.com/monitoring-linux-file-access-changes-and-modifications/
-- Afick
-- AIDE
-- Osiris
-- Samhain
+
+- Linux FIMs
+  - https://linux-audit.com/monitoring-linux-file-access-changes-and-modifications/
+  - Afick
+  - AIDE
+  - Osiris
+  - Samhain
 
 ## (SIEM) Security Information and Event Management
 We need to consider how all the information is gathered from all of this detection capability so it can possibly be useful in some way.
