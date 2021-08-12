@@ -62,9 +62,9 @@ or sent out through to other systems, such as simply via email or through to a f
 - Osquery can be used for intrusion detection and it can also be used as a file integrity monitor across platforms Windows, Mac and Linux.
 - Ossec which again can be used as a intrusion detection system and more, also has file integrity monitoring and is multiplatform Windows, Mac and Linux.
 - Tripwire: https://github.com/Tripwire/tripwire-open-source
-- https://eljefe.immunityinc.com/
+- https://eljefe.immunityinc.com/  
 Linux FIMs
-    - https://linux-audit.com/monitoring-linux-file-access-changes-and-modifications/
+- https://linux-audit.com/monitoring-linux-file-access-changes-and-modifications/
 - Afick
 - AIDE
 - Osiris
