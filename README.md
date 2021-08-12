@@ -84,20 +84,6 @@ But essentially they are all basically a hub where all data comes back to. Log c
 - SolarWinds Log & Event Manager
 
 
-
-
-- Secure Router
-  - Disable WPS
-  - Disable UPnp
-  - Disable DMZ
-  - Disable any Port Forwarding
-  - Update Router’s Firmware
-  - Use a complex WPA2 personal password whit CCMP(AES) or CBC-MAC algorithm
-  - Use Not common network name (SSID)
-  - Change routers login password
-  - Enabling AP Isolation
-  - Having separate Wi-Fi networks for devices of a different trust levels. SSID1, SSID2...
-
 ## Network Isolation
 <p align="center">
   <img src="https://user-images.githubusercontent.com/87951795/128722827-340adba9-2709-4ed7-9c38-02dfdac285ad.png" alt="animated" />
@@ -118,6 +104,18 @@ VLAN:
 Another option of these villans that you can see here villans virtual LANs. 1These are commonly used to isolate networks villans are the logical separation of networks instead of physical. And they use tags included in the packets that are sent between the devices on the network in order to determine that they are separate
 
 Wi-Fi you will need a router and or access point that supports something called a ip isolation and it will need to support multiple SSIDs on the same access point.
+
+- Secure Router
+  - Disable WPS
+  - Disable UPnp
+  - Disable DMZ
+  - Disable any Port Forwarding
+  - Update Router’s Firmware
+  - Use a complex WPA2 personal password whit CCMP(AES) or CBC-MAC algorithm
+  - Use Not common network name (SSID)
+  - Change routers login password
+  - Enabling AP Isolation
+  - Having separate Wi-Fi networks for devices of a different trust levels. SSID1, SSID2...
 
 ## Vulnerability Scanner
 - Nessus: https://www.tenable.com/products/nessus/nessus-essentials
