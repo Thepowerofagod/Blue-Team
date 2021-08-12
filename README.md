@@ -10,6 +10,14 @@ Cyber defense tools and techniques
 </p>
 
 
+The Linux security blog about Auditing, Hardening, and Compliance https://linux-audit.com/
+
+## Security Linux distribution
+- Network Security Toolkit (NST)
+  - https://sourceforge.net/projects/nst/?source=recommended
+- Security Onion 
+  - https://securityonionsolutions.com/
+
 ## Osquery
 Some of the tools (open-source and commercial) that utilize Osquery are listed below.
 - https://otx.alienvault.com/endpoint-security/welcome  
@@ -23,8 +31,41 @@ Query multiple endpoints from the Kolide Fleet UI
 - https://www.kolide.com/
 - https://github.com/fleetdm/fleet
 
+## (IDS) Intrusion Detection Systems
 
-## Network
+## (FIM) File Integrity Monitoring
+installed on your device or its host base, and it performs the act of validating the integrity of your operating system or and or applications and files by using a verification method between the current file or what it's checking current state and a known good baseline.
+This comparison method often involves calculating a known, a cryptographic checksum or hash of the files original baseline and comparing it with the calculated checksum or hash of the current state of 
+So, you know, if there's been any changes, if there is any integrity, change or the file attributes can also be used to monitor integrity.
+Generally, the act of performing file integrity monitoring is automated and alerts are then propagated
+or sent out through to other systems, such as simply via email or through to a full monitoring system SIEM
+
+- Osquery can be used for intrusion detection and it can also be used as a file integrity monitor across platforms Windows, Mac and Linux.
+- Ossec which again can be used as a intrusion detection system and more, also has file integrity monitoring and is multiplatform Windows, Mac and Linux.
+- Tripwire: https://github.com/Tripwire/tripwire-open-source
+
+Linux FIMs
+    - https://linux-audit.com/monitoring-linux-file-access-changes-and-modifications/
+- Afick
+- AIDE
+- Osiris
+- Samhain
+
+## (SIEM) Security Information and Event Management
+We need to consider how all the information is gathered from all of this detection capability so it can possibly be useful in some way.
+But essentially they are all basically a hub where all data comes back to. Log collection, log analysis, event correlation replication, log monitoring, real time alerting, reporting, file integrity monitoring and dashboards that people look at.
+- Splunk Enterprise
+- AlienVault Open Source SIEM (OSSIM) (Free version available) https://cybersecurity.att.com/products/ossim
+- EMC RSA Security Analytics
+- HP ArcSight Enterprice Security Manager (ESM)
+- IBM Security QRadar SIEM
+- LogRhythm Security Intelligence Platform
+- McAfee Enterprice Security Manager 
+- SolarWinds Log & Event Manager
+
+
+
+
 - Secure Router
   - Disable WPS
   - Disable UPnp
