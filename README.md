@@ -170,6 +170,7 @@ This can make it extremely difficult (if not impossible) to get an accurate read
      - Mac : https://gpgtools.org/  
 
 ## Password Manager
+If an attacker is present on your device using a key logger or other sort of malware, they will be able to capture the master password, which would compromise your database optimally. You would want to install this in a virtual machine to provide that extra layer of isolation or in cubes like as a separate VM to just give it that extra isolation. You may even steal the file on an encrypted USB or some other form of physical isolation.
 - https://masterpassword.app/
 - https://keepass.info/
 - https://keepassxc.org/
