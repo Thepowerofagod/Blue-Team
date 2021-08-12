@@ -139,15 +139,29 @@ This can make it extremely difficult (if not impossible) to get an accurate read
 
 ## Threat Detection and Monitoring
 CanaryTokens: https://www.stationx.net/canarytokens/
-These canary tokens can alert you if something or someone is trying to look through your personal files on your device, on your laptop, your phone, your tablet, in your email, on your online account and so on.
+These canary tokens can alert you if something or someone is trying to look through your personal files on your device, on your laptop, your phone, your tablet, in your email, on your online account and so on.  
 
-Add Email and Description
-Select: DNS/HTTP or Browser Scanner(Show more info)
-Generate Token: Web bugs 
-thunderbird > New Email > Insert Image > insert the web bug (change the ending to something like image.gif), don´t atach and dont use alternate text.
-Add Value data from the example to the email: https://www.stationx.net/canarytokens/
-Add more traps in the email like email adreses or links
-Add SMTP Token (Trap Emails) to data base.
+Add Email and Description  
+Select: DNS/HTTP or Browser Scanner(Show more info)  
+Generate Token: Web bugs   
+thunderbird > New Email > Insert Image > insert the web bug (change the ending to something like image.gif), don´t atach and dont use alternate text.  
+Add Value data from the example to the email: https://www.stationx.net/canarytokens/  
+Add more traps in the email like email adreses or links  
+Add SMTP Token (Trap Emails) to data base.  
+
+OpenCanary
+The password is shown in plain text here, which is not ideal, but you can set up any email account to do this and then forward it to the actual email address that you normally use.
+- https://github.com/thinkst/opencanary
+- https://docs.opencanary.org/en/latest/index.html
+- https://canary.tools/
+
+Artillery - Binary Defense
+- https://www.binarydefense.com/
+- https://github.com/BinaryDefense/artillery
+
+HoneyDrive
+- https://sourceforge.net/projects/honeydrive/
+- https://bruteforce.gr/honeydrive/
 
 ## Firefox Extensions
 - HTTPS Everywhere
