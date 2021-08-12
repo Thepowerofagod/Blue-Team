@@ -156,6 +156,7 @@ This can make it extremely difficult (if not impossible) to get an accurate read
     - Filevault2
   - Linux
     - Dm-crypt and LUKS
+      - https://github.com/cornelinux/yubikey-luks
     - Encrypting the boot partition with Grub2
 
 - Containers, Partition, USBs
