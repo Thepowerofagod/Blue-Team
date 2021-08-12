@@ -32,6 +32,23 @@ Query multiple endpoints from the Kolide Fleet UI
 - https://github.com/fleetdm/fleet
 
 ## (IDS) Intrusion Detection Systems
+- https://www.snort.org/
+- https://suricata.io/
+- https://zeek.org/
+- https://openwips-ng.org/
+- https://www.ossec.net/
+
+## Network Analysis 
+Tools for network behavior analysis also called network security monitoring and just general network analysis, the first one is squeal.
+- Sguil https://bammv.github.io/sguil/index.html
+- Xplico https://www.xplico.org/
+- NetworkMiner https://www.netresec.com/?page=NetworkMiner
+
+You can use Web proxies in order to check out certain things.
+If you're wanting to see the traffic between your browser and the endpoint web server:
+- https://mitmproxy.org/
+- https://portswigger.net/burp
+- https://owasp.org/www-project-zap/
 
 ## (FIM) File Integrity Monitoring
 installed on your device or its host base, and it performs the act of validating the integrity of your operating system or and or applications and files by using a verification method between the current file or what it's checking current state and a known good baseline.
