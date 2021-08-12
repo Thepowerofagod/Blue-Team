@@ -32,10 +32,12 @@ Query multiple endpoints from the Kolide Fleet UI
 - https://github.com/fleetdm/fleet
 
 ## (IDS) Intrusion Detection Systems
+NIDS
 - https://www.snort.org/
 - https://suricata.io/
 - https://zeek.org/
 - https://openwips-ng.org/
+HIDS
 - https://www.ossec.net/
 
 ## Network Analysis 
