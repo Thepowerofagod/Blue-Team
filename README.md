@@ -137,6 +137,14 @@ This can make it extremely difficult (if not impossible) to get an accurate read
     - Linux malware Wiki: https://en.wikipedia.org/wiki/Linux_malware
     - https://www.rfxn.com/
 
+## Threat Detection and Monitoring
+CanaryTokens: https://www.stationx.net/canarytokens/
+These canary tokens can alert you if something or someone is trying to look through your personal files on your device, on your laptop, your phone, your tablet, in your email, on your online account and so on.
+
+Add Email and Description
+Select: DNS/HTTP or Browser Scanner(Show more info)
+Generate Token
+
 ## Firefox Extensions
 - HTTPS Everywhere
 - uBlock Origin
@@ -188,9 +196,25 @@ Soft Tokens
 Hard Tokens
 - https://www.yubico.com/
 
-## Email Aliases (. and +)
-- username@protonmail.com > u.s.e.r.name@protonmail.com > u.s.e.r.name+wedding@protonmail.com
-- johndoe@gmail.com > j.o.h.n.d.o.e@gmail.com > j.o.h.n.d.o.e+youtube@gmail.com
+## Email
+- thunderbird: https://www.thunderbird.net
+
+- Email Aliases (. and +)
+  - username@protonmail.com > u.s.e.r.name@protonmail.com > u.s.e.r.name+wedding@protonmail.com
+  - johndoe@gmail.com > j.o.h.n.d.o.e@gmail.com > j.o.h.n.d.o.e+youtube@gmail.com
+
+- Temp Mail:  
+  - https://www.guerrillamail.com/
+  - https://tempmailaddress.com
+  - Huge list of other providers - https://gist.github.com/michenriksen/8710649
+
+- Anonymous Email
+  - Proton Mail - https://protonmail.com/ 
+  - elude - https://elude.in
+  - torbox 
+  - Riseup
+  - mail2tor 
+  - More: https://www.reddit.com/r/onions/comments/6krt34/list_of_onion_email_providers/
 
 ## Dark Net
 Dark Net Search Engines:  
@@ -212,19 +236,6 @@ Dark Net Others:
 
 Fake ID:  
 - https://www.elfqrin.com/fakeid.php
-
-Temp Mail:  
-- https://www.guerrillamail.com/
-- https://tempmailaddress.com
-- Huge list of other providers - https://gist.github.com/michenriksen/8710649
-
-Anonymous Email
-- Proton Mail - https://protonmail.com/ 
-- elude 
-- torbox 
-- Riseup
-- mail2tor 
-- More: https://www.reddit.com/r/onions/comments/6krt34/list_of_onion_email_providers/
 
 XMPP Servers
 - https://gist.github.com/dllud/a46d4a555e31dfeff6ad41dcf20729ac
