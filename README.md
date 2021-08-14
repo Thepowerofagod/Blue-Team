@@ -263,6 +263,18 @@ sudo lshw -class disk
 system_profiler SPSerialATADataType
 ```
 
+change the hardware serial IDs.
+- Windows
+  - VolumeID (sysinternals) 
+  - Chameleon
+The next mitigation is to have anonymously purchased the devices that you use.
+Another strong mitigation is using virtual machines Virtual machines have different physical machine IDs and there is no traceable connection to the real physical machine’s unique hardware IDs So when in a virtual machine, you don’t need to worry about these hardware serial numbers.
+
+Portableapps
+- https://portableapps.com/
+These can be used with Linux, Unix, and BSD via Wine,
+and Mac OSX via Crossover, Wineskin, Winebottle, and PlayOnMac.
+The application could be placed on a physically secure device, like an encrypted USB.
 
 ## Firewall
 Many firewalls are configured to simply drop incoming packets. Nmap sends a TCP SYN request, and receives nothing back. This indicates that the port is being protected by a firewall and thus the port is considered to be filtered.
@@ -373,6 +385,7 @@ Soft Tokens
 
 Hard Tokens
 - https://www.yubico.com/
+- https://www.nitrokey.com/
 
 ## Email
 - thunderbird: https://www.thunderbird.net
