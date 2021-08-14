@@ -158,6 +158,8 @@ All methods to preven the execution of malicious code on the endpoint. Things li
   - Grsecurity
 
 ## Security Through Isolation and Compartmentalization
+Dual Boot
+There is no real isolation in the file system with dual boot.
 
 Physical Security Domains
 Physical Separation provides the highest level of security and privacy.
@@ -199,9 +201,34 @@ You can have operating systems
 that are dedicated to Isolation/Separation like Qubes,
 
 ## Sandboxing
+Sandbox is an isolated environment for running applications or code. It’s a virtual container to keep the contents confined to that container.
+A sandbox should be used for high risk applications, such as those that interact directly with untrusted sources like the internet, such as browsers and email clients.
+![Screenshot 2021-08-14 at 15 32 22](https://user-images.githubusercontent.com/87951795/129447950-a00fd4a0-ab66-4b1f-a984-55fbe64fc6d8.png)
+![Screenshot 2021-08-14 at 15 28 40](https://user-images.githubusercontent.com/87951795/129447952-b47214d5-8d81-46c9-8c73-4e71c5185fc8.png)
+
+Deep Freeze Windows, Mac and Linux
+It provides a completely non-restrictive working environment where there is no need to be concerned about system damage or corruption; a simple restart eradicates all changes and ensures that the standard system configuration is available at all times.
+- https://www.faronics.com/en-uk/products/deep-freeze/standard
+
 - Windows 
-- Mac
+  - Sanboxie-Plus https://sandboxie-plus.com/downloads/
+  - https://bufferzonesecurity.com/product/how-it-works/
+  - https://www.shadowdefender.com/
 - Linux
+  - AppArmor is a kind of sandbox. It is a mandatory access control framework for Linux. What AppArmor does is it confines programs according to a set of rules that specify what files a given program can access.
+    - https://en.wikipedia.org/wiki/AppArmor
+  - Firejail
+    - https://firejail.wordpress.com/
+    - https://github.com/netblue30/firejail
+    - https://sourceforge.net/projects/firejail/
+      - firejail --private firefox
+  - https://linux.die.net/man/8/sandbox
+  - https://igurublog.wordpress.com/downloads/script-sandfox/
+  - 
+- Mac
+
+
+
 - Use Firefox in custom VM whit Apparmor and Firejail (amnesic or roll back the snapshot)
 
 
