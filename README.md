@@ -157,11 +157,39 @@ All methods to preven the execution of malicious code on the endpoint. Things li
   - SElinux
   - Grsecurity
 
+## Security Through Isolation and Compartmentalization
 ## Sandboxing
 - Windows 
 - Mac
 - Linux
 - Use Firefox in custom VM whit Apparmor and Firejail (amnesic or roll back the snapshot)
+
+## Change the Mac Address
+If they know the unique MAC, that can be potentially traced back to you through the purchasing of that device.
+08:00:27:2e:5b:59 = [08:00:27] Manufacture identifier [2e:5b:59] Unique identifier
+Virtual machines hide your real MAC and also allow for the setting of the MAC address. You need to change the virtual MAC through the VM settings frequently.
+Tails use MAC Changers as default. But do check to make sure they don’t show the real MAC.
+You could anonymously purchase a whole bunch of cheap USB network adaptors and use a MAC changer in combination to mitigate the risk.This would be the best way of MAC mitigation
+
+- Windows
+ipconfig look for Physical Address
+  - https://technitium.com/tmac/
+- Linux
+ficonfig look for HWaddr or ether. ip addr or ip a look for link/ether
+  - https://linuxconfig.org/change-mac-address-with-macchanger-linux-command
+```
+sudo apt install macchanger
+sudo ifconfig [interface] down
+sudo macchanger -r [interface]
+sudo ifconfig [interface] up
+```
+- Mac
+ficonfig look for HWaddr or ether
+```
+sudo ifconfig [interface] ether aa:aa:aa:aa:aa:aa
+```
+  - https://www.macupdate.com/app/mac/25729/macdaddyx
+  - https://wifispoof.com/
 
 ## Firewall
 Many firewalls are configured to simply drop incoming packets. Nmap sends a TCP SYN request, and receives nothing back. This indicates that the port is being protected by a firewall and thus the port is considered to be filtered.
