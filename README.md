@@ -226,6 +226,13 @@ It provides a completely non-restrictive working environment where there is no n
   - https://igurublog.wordpress.com/downloads/script-sandfox/
   - 
 - Mac
+  - https://developer.apple.com/library/archive/documentation/Security/Conceptual/AppSandboxDesignGuide/AboutAppSandbox/AboutAppSandbox.html
+  - https://reverse.put.as/wp-content/uploads/2011/09/Apple-Sandbox-Guide-v1.0.pdf
+  - https://github.com/s7ephen/OSX-Sandbox--Seatbelt--Profiles
+  - https://github.com/pansen/macos-sandbox-profiles/blob/master/firefox.sb
+  - https://github.com/hellais/Buckle-Up
+  - https://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html
+  - https://paolozaino.wordpress.com/2015/08/04/how-to-run-your-applications-in-a-mac-os-x-sandbox-to-enhance-security/
 
 
 
