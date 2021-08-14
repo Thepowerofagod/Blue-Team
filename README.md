@@ -158,19 +158,61 @@ All methods to preven the execution of malicious code on the endpoint. Things li
   - Grsecurity
 
 ## Security Through Isolation and Compartmentalization
+
+Physical Security Domains
+Physical Separation provides the highest level of security and privacy.
+could be that you have one lock down physical machine or laptop,
+and the operating system and everything in it
+is configured in a certain way that that gives you high security.
+And you have another physical machine or laptop,
+and that is for general use.
+
+Virtual Security Domains - Platform Virtualization software
+So if you have a virtual machine guest operating system,
+so say for example Debian,
+if this was compromised and your host operating system, say Windows,
+then that would be difficult to access,
+it would be difficult to get from Debian to Windows through the Hypervisor.
+The Hypervisor would need to be exploitable,
+or it would have to be poorly configured in some way
+like you’ve allowed file sharing or something like that in order,
+so the exploit from the Debian to the Windows environment can be done.
+
+To create separate domains you could do things like dual booting,
+you can use Platform virtualisation software and hypervisors,
+the likes of VMware, Virtualbox,
+Vagrant, Hyper-V, VPC.
+There’s also Kernel Virtual Machine,
+there’s Jails or BSD Jails,
+Zones, Linux Containers, Docker.
+You can also have hidden operating systems,
+VeraCrypt and TrueCrypt provide that functionality.
+You can have separate hard drive partitions
+that are encrypted and hidden.
+You can have things like Sandboxes.
+You can have portable apps.
+You can have non-persistent operating systems like Tails,
+Knoppix, Puppy Linux,
+JonDo Live, Tiny Core Linux.
+You can have bootable USBs.
+You can have operating systems
+that are dedicated to Isolation/Separation like Qubes,
+
 ## Sandboxing
 - Windows 
 - Mac
 - Linux
 - Use Firefox in custom VM whit Apparmor and Firejail (amnesic or roll back the snapshot)
 
-## Change the Mac Address
+
+## Unique Hardware Identifiers
+
+MAC and How to change the Mac Address
 If they know the unique MAC, that can be potentially traced back to you through the purchasing of that device.
 08:00:27:2e:5b:59 = [08:00:27] Manufacture identifier [2e:5b:59] Unique identifier
 Virtual machines hide your real MAC and also allow for the setting of the MAC address. You need to change the virtual MAC through the VM settings frequently.
 Tails use MAC Changers as default. But do check to make sure they don’t show the real MAC.
 You could anonymously purchase a whole bunch of cheap USB network adaptors and use a MAC changer in combination to mitigate the risk.This would be the best way of MAC mitigation
-
 - Windows
 ipconfig look for Physical Address
   - https://technitium.com/tmac/
@@ -190,6 +232,37 @@ sudo ifconfig [interface] ether aa:aa:aa:aa:aa:aa
 ```
   - https://www.macupdate.com/app/mac/25729/macdaddyx
   - https://wifispoof.com/
+
+
+View CPU information
+This will show you what information is available in your CPU, there shouldn’t be anything unique if you have a modern processor.
+- Windows
+  - https://www.cpuid.com/softwares/cpu-z.html
+- Linux
+  - https://launchpad.net/i-nex
+- Mac
+  - https://software.intel.com/content/www/us/en/develop/download/download-maccpuid.html
+
+Motherboards 
+often, but not always, contain unique identifiers in the system management BiOS,
+Use Dmidecode on Mac, Windows or Linux.
+
+Hard Drive 
+serial numbers and unique IDs as these can exist as well.
+- Windows
+```
+wmic diskdrive get serialnumber
+```
+- Linux
+```
+sudo apt install lshw
+sudo lshw -class disk 
+```
+- Mac
+```
+system_profiler SPSerialATADataType
+```
+
 
 ## Firewall
 Many firewalls are configured to simply drop incoming packets. Nmap sends a TCP SYN request, and receives nothing back. This indicates that the port is being protected by a firewall and thus the port is considered to be filtered.
