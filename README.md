@@ -17,6 +17,12 @@ The Linux security blog about Auditing, Hardening, and Compliance https://linux-
   - https://sourceforge.net/projects/nst/?source=recommended
 - Security Onion 
   - https://securityonionsolutions.com/
+- Whonix
+  - https://www.whonix.org/
+- Qubes OS
+  - https://www.qubes-os.org/downloads/
+- Tails
+  - https://tails.boum.org
 
 ## Osquery
 Some of the tools (open-source and commercial) that utilize Osquery are listed below.
