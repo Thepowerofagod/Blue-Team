@@ -180,6 +180,95 @@ or it would have to be poorly configured in some way
 like you’ve allowed file sharing or something like that in order,
 so the exploit from the Debian to the Windows environment can be done.
 
+Type 1 (Faster and More Secure)
+You might set up a
+Type 1 hypervisor on a server on your network,
+or remotely in the cloud to escape
+an adversary’s sphere of influence
+that host virtual machines for you.
+- VMware ESX/ESXi
+- Oracle VM Server
+- Microsoft HyperV
+- XenServer
+
+Type 2
+- Virtual Box
+- Vmware Player
+- Vmware workstation
+- Vmware fusion
+- Parallels Desktop
+- Vagrant
+- VPC
+- Citrix Desktopplayer
+
+Virtual Appliance - TurnKey Linux
+https://www.turnkeylinux.org/
+
+Virtual Machine Weaknesses  
+For example, a simple remote access tool running on the host
+would only need to take a screenshot
+to watch the activity of the guest virtual machine,
+or run a key logger which would effectively break
+the isolation between them completely.
+Maintaining the security of the host operating system
+is of paramount importance.   
+
+Also, vice versa to what we’ve just discussed,
+a guest VM could compromise the host operating system,
+or other VMs due to vulnerabilities and configuration settings.
+The hypervisor sandbox or the VM Tools installed
+can have security vulnerabilities that could compromise this isolation.  
+
+Virtual machines can leak information, so for example,
+traces of your virtual machine’s session could be left
+on the local hard drive of the host,
+even if it’s a live operating system.  
+For example, host operating systems usually use
+virtual memory called swapping or paging
+which copies parts of the RAM to the hard drive.
+This could contain information about the guest’s session,
+and it could be left on the host’s hard drive.
+Virtual Machine Hardening   
+So one approach to deal with this problem,
+of all the unwanted host data, would be to use
+whole disk encryption on the host machine
+
+
+VMs are used by security researches to deliberately isolate malware,
+Because of this, advanced malware writers
+have designed counter measures that can detect
+when their malware is running on a virtual system,
+causes the malware to shut down its malicious functionality,
+This is great for us,
+when using VMs for isolation, and as a security control,
+as the malware effectively disables itself,
+Some malware uses the virtual machine detection
+to then attempt to exploit security holes
+
+Shared networks are also an attack vector.
+If the guests and hosts share the same network,
+if any of those machines are compromised,
+the other machines could be targets for attack.
+In most instances, if you are using VirtualBox on your laptop,
+the host and guest will share the same network. So for example,
+maybe you have a Debian host and a Windows guest,
+which have a bridged network adapter.
+Windows, the guest is compromised, the Windows VM then attempts an SSL stripping attack. 
+Virtual Machine Hardening  
+Using a USB network dongle instead of the host network adapter,
+as discussed already in the area on physical isolation.
+You can place the VM on a separate network to the host
+or for virtual isolation via a VLAN.
+This is to help mitigate attacks that come from the network,
+
+
+Features like shared folders, clipboard access
+and drag and drop functionality,
+all reduce the isolation and allow attack vectors.
+
+Virtual Machine Hardening  
+
+
 To create separate domains you could do things like dual booting,
 you can use Platform virtualisation software and hypervisors,
 the likes of VMware, Virtualbox,
