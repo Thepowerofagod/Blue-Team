@@ -232,8 +232,8 @@ Virtual Machine Hardening
 So one approach to deal with this problem,
 of all the unwanted host data, would be to use
 whole disk encryption on the host machine.
-ENable Encryption on the VM settings to
-
+ENable Encryption on the VM settings to.
+Encrypting the operating system itself using more well-known encryption technology such as LUKS, FileVault 2, Bitlocker, and VeraCrypt.
 
 VMs are used by security researches to deliberately isolate malware,
 Because of this, advanced malware writers
@@ -268,6 +268,23 @@ and drag and drop functionality,
 all reduce the isolation and allow attack vectors.
 
 Virtual Machine Hardening  
+- disable the audio and the microphone
+- cover your webcam with tape
+- disable shared folders
+- disable drag and drop and clipboard,
+- don't enable video acceleration, 3D acceleration
+- do not enable serial ports.
+- If you can, do not install VirtualBox Guest Addition or VMWare Tools or equivalent.
+- You want to remove the floppy drive and remove any CD or DVD drives.
+- If it's a Live operating system, you want to remove any virtual disks.
+- Do not attach USB devices if you can help it, perhaps the network dongle, but nothing else if you can avoid it.
+- Disable the USB controller which is enabled by default. (When you disable the USB controller, this requires you setting the pointing device to be a PS/2 mouse so that your mouse will work.)
+- Do not enable remote display server,
+- do not enable I/O APIC or EFI.
+- Enable PAE/NX, NX is in fact a security feature. (System > Processor)
+- If you are concerned about someone getting a hold of your device and local forensics, then use non-persistent operating systems like live CDs, live USBs and don't add virtual storage when setting up the virtual machine.
+- You can create your own custom live operating system, so you go about installing whatever operating system it is that you want, configuring it in the way that you want, and then you can convert the virtual disk to an ISO and then boot from the ISO as a live CD. https://www.turnkeylinux.org/blog/convert-vm-iso
+- You can use VMware snapshots to create non-persistence. after you’ve performed your activities you restore. It is a reasonably good solution for basic non persistence.
 
 
 To create separate domains you could do things like dual booting,
