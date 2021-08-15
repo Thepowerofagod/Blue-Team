@@ -227,11 +227,12 @@ For example, host operating systems usually use
 virtual memory called swapping or paging
 which copies parts of the RAM to the hard drive.
 This could contain information about the guest’s session,
-and it could be left on the host’s hard drive.
+and it could be left on the host’s hard drive.  
 Virtual Machine Hardening   
 So one approach to deal with this problem,
 of all the unwanted host data, would be to use
-whole disk encryption on the host machine
+whole disk encryption on the host machine.
+ENable Encryption on the VM settings to
 
 
 VMs are used by security researches to deliberately isolate malware,
@@ -253,7 +254,7 @@ In most instances, if you are using VirtualBox on your laptop,
 the host and guest will share the same network. So for example,
 maybe you have a Debian host and a Windows guest,
 which have a bridged network adapter.
-Windows, the guest is compromised, the Windows VM then attempts an SSL stripping attack. 
+Windows, the guest is compromised, the Windows VM then attempts an SSL stripping attack.  
 Virtual Machine Hardening  
 Using a USB network dongle instead of the host network adapter,
 as discussed already in the area on physical isolation.
