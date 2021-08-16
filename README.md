@@ -471,7 +471,7 @@ For Host or Network based Firewalls. There should be an implicit deny all to ext
   - Linux
     - IPtables: Linux use NET filter sistem as firewall solution iptable is an interface for it.
 ```
-iptables -L
+iptables -L -v --line-number -n
 
 Chain INPUT controls inbound connections enable file share or let people ping this pc.
 
@@ -498,7 +498,27 @@ iptables -P INPUT DROP
 iptables -P FORWARD DROP
 iptables -P OUTPUT DROP
 
+This will allow all incoming packets destined for the local host interface to be accepted.
+This is generally required as many software applications expect to be able to communicate with the local adapter.
+iptables -A INPUT -i lo -j ACCEPT
 
+enabling dynamic packet filtering 
+We don't need to have a rule allowing the traffic to come back from the web server because we have establishnthat connection.
+This rule knows the state and allows a web server to communicate back.
+iptables -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+
+allow all out coming packets destined for local host interface to be accepted.
+Again that's because some software applications expect to be able to communicate with the local host adapter.
+iptables -A OUTPUT -o lo -j ACCEPT
+
+second dynamic packet filtering
+But this time for outbound traffic to be able to come back and understand the state that a connection
+has already been established or is related
+iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+iptables -A OUTPUT -o [interface] -p udp -m udp --dport 53 -j ACCEPT
+iptables -A OUTPUT -o [interface] -p tcp -m tcp --dport 80 -m state --state NEW -j ACCEPT
+iptables -A OUTPUT -o [interface] -p tcp -m tcp --dport 443 -m state --state NEW -j ACCEPT
 
 ```
 - Network base Firewall
