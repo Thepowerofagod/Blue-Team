@@ -470,6 +470,9 @@ For Host or Network based Firewalls. There should be an implicit deny all to ext
     - Antivirus base Firewall like Kapersky or BitDefender
   - Linux
     - IPtables: Linux use NET filter sistem as firewall solution iptable is an interface for it.
+      - https://github.com/meetrp/personalfirewall
+      - https://tech.meetrp.com/blog/iptables-personal-firewall-to-protect-my-laptop/
+      - https://www.frozentux.net/iptables-tutorial/iptables-tutorial.html
 ```
 iptables -L -v --line-number -n
 
@@ -519,6 +522,30 @@ iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 iptables -A OUTPUT -o [interface] -p udp -m udp --dport 53 -j ACCEPT
 iptables -A OUTPUT -o [interface] -p tcp -m tcp --dport 80 -m state --state NEW -j ACCEPT
 iptables -A OUTPUT -o [interface] -p tcp -m tcp --dport 443 -m state --state NEW -j ACCEPT
+
+(See all comands)
+iptables -S
+
+(Save in Kali and Debian)
+/sbin/iptables-save
+
+Disable IPv6
+ip6tables -P INPUT DROP
+ip6tables -P FORWARD DROP
+ip6tables -P OUTPUT DROP
+
+(Delete Rule)
+iptables -D OUTPUT 5
+
+(Clear all and restart)
+iptables -P INPUT ACCEPT
+iptables -P FORWARD ACCEPT
+iptables -P OUTPUT ACCEPT
+iptables -t nat -F
+iptables -t mangle -F
+iptables -F
+iptables -X
+
 
 ```
 - Network base Firewall
