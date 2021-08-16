@@ -468,7 +468,39 @@ For Host or Network based Firewalls. There should be an implicit deny all to ext
     - https://tinywall.pados.hu/
     - https://www.glasswire.com/
     - Antivirus base Firewall like Kapersky or BitDefender
+  - Linux
+    - IPtables: Linux use NET filter sistem as firewall solution iptable is an interface for it.
+```
+iptables -L
 
+Chain INPUT controls inbound connections enable file share or let people ping this pc.
+
+Chain FORWARD controlling inbound connections that are destined to be forwarded on to another device.
+Unless your device has a router or is doing NAT or something special like SSL stripping you won't use 
+this forward chain on a laptop or a desktop.
+
+Chain OUTPUT controls outbound connections. If you wanted this laptop to be able to surf the web you might enable port 53, 80 ,443.
+
+chains have default behaviour called default policies. 
+Every table starts at the top of its list of rules and goes through each rule until it finds one that
+matches if one does not match. It applies the default policy 
+They can actually be set to three different options.
+
+Accept: allow connections to come through.
+Drop: drop the connection and send no response back to the source
+Reject: don't allow the connection and send back a response to inform the source that it has been rejected.
+
+(delete the rules)
+iptables -F 
+
+(change chain police)
+iptables -P INPUT DROP
+iptables -P FORWARD DROP
+iptables -P OUTPUT DROP
+
+
+
+```
 - Network base Firewall
 
 
