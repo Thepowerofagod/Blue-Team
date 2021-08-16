@@ -462,7 +462,12 @@ For Host or Network based Firewalls. There should be an implicit deny all to ext
   - Block any Windows Mac or Linux service that are not being used by you.
 
 - Host base Firewall
-
+  - Windows 
+    - Windows Firewall https://www.howtogeek.com/227093/how-to-block-an-application-from-accessing-the-internet-with-windows-firewall/
+    - Windows Firewall Control (WFC): https://www.binisoft.org/wfc.php
+    - https://tinywall.pados.hu/
+    - https://www.glasswire.com/
+    - Antivirus base Firewall like Kapersky or BitDefender
 
 - Network base Firewall
 
