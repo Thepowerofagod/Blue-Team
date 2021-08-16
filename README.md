@@ -423,7 +423,29 @@ These can be used with Linux, Unix, and BSD via Wine,
 and Mac OSX via Crossover, Wineskin, Winebottle, and PlayOnMac.
 The application could be placed on a physically secure device, like an encrypted USB.
 
+
 ## Firewall
+Firewalls allow and deny traffic based on a set of rules or what's called an access control list.
+More advanced firewalls work at the application layer to do deep packet inspection or DPI and a generally dedicated hardware firewalls.
+
+Ingress/Inbound Filtering:
+Because of Nat no network traffic can connect in to the network without an explicit port forwarding rule
+or demilitarized zone being set up to allow that traffic
+So there is little need for a firewall to block inbound traffic.
+In most cases on a home network because inbound traffic from real Internet IPs cannot communicate to
+private IP addresses on an internal network it's just not possible unless you set up that port forwarding
+or that demilitarized zone.
+NAT doesn't protect you from not trusted devices on a network that you share.
+
+Egress/Outbound Filtering
+Egress filtering a firewall can be used for blocking
+outbound connections.
+So for example stopping your Windows machine from communicating home to Microsoft or DNS leaks from
+a VPN or malware communicating to its command and control server.
+Attackers make connections out once they have a foothold on your device using their malware.
+Outbound connections from a home network to an Internet IP address is how malware communicates not via inbound.
+
+
 Many firewalls are configured to simply drop incoming packets. Nmap sends a TCP SYN request, and receives nothing back. This indicates that the port is being protected by a firewall and thus the port is considered to be filtered.
 That said, it is very easy to configure a firewall to respond with a RST TCP packet. For example, in IPtables for Linux, a simple version of the command would be as follows:
 ```
@@ -431,8 +453,21 @@ iptables -I INPUT -p tcp --dport <port> -j REJECT --reject-with tcp-reset
 ```
 This can make it extremely difficult (if not impossible) to get an accurate reading of the target(s).
 
-### Host base Firewall
-### Network base Firewall
+For Host or Network based Firewalls. There should be an implicit deny all to external traffic connecting inbound unless it is specifically required.
+- General Firewall Rueles Host or Network based
+  - All network traffic should be denied unless implicitly allowed.
+  - Block IPv6
+  - Block UPnP 1900
+  - Block IGMP
+  - Block any Windows Mac or Linux service that are not being used by you.
+
+- Host base Firewall
+
+
+- Network base Firewall
+
+
+
 
 ## Anti-Virus and End-Point-Protection
 - Comparatives
