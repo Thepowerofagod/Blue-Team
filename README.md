@@ -445,6 +445,13 @@ a VPN or malware communicating to its command and control server.
 Attackers make connections out once they have a foothold on your device using their malware.
 Outbound connections from a home network to an Internet IP address is how malware communicates not via inbound.
 
+Dynamic packet filtering and Stateful packet inspection
+You don't need a rule to allow web traffic to come back.
+You only need a rule to allow it out of the network.
+And in this example you can see poor 1525 being used which is here the firewall remembers this port
+and automatically allows through dynamic access control lists the inbound connection while the session is running
+In this example when the connection is close with a fin or as te packet the firewall removes the dynamic
+Access Control List and for UDP which is connection unless the access control is just times out.
 
 Many firewalls are configured to simply drop incoming packets. Nmap sends a TCP SYN request, and receives nothing back. This indicates that the port is being protected by a firewall and thus the port is considered to be filtered.
 That said, it is very easy to configure a firewall to respond with a RST TCP packet. For example, in IPtables for Linux, a simple version of the command would be as follows:
@@ -548,6 +555,23 @@ iptables -X
 
 
 ```
+    - UFW (front-end for iptables)
+    - Gufw.org (GUI)
+```    
+sudo apt install ufw
+iptables -F
+ufw status
+ufw enable
+ufw status verbose/numbered
+ufw default deny incoming
+ufw default deny outgoing
+ufw delet 2
+ufw allow out 67:68/udp
+
+nano /etc/default/ufw
+IPV6=no
+
+```    
 - Network base Firewall
 
 
