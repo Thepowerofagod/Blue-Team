@@ -423,7 +423,6 @@ These can be used with Linux, Unix, and BSD via Wine,
 and Mac OSX via Crossover, Wineskin, Winebottle, and PlayOnMac.
 The application could be placed on a physically secure device, like an encrypted USB.
 
-
 ## Firewall
 Firewalls allow and deny traffic based on a set of rules or what's called an access control list.
 More advanced firewalls work at the application layer to do deep packet inspection or DPI and a generally dedicated hardware firewalls.
@@ -571,11 +570,18 @@ ufw allow out 67:68/udp
 nano /etc/default/ufw
 IPV6=no
 
-```    
+```   
+  - Mac
+    - PF (firewall): https://en.wikipedia.org/wiki/PF_%28firewall%29
+    - Little Snitch: https://www.obdev.at/index.html
+    - Murus & Vallum: https://www.murusfirewall.com/
+
 - Network base Firewall
-
-
-
+  - DD-WRT (Router)
+    - Change iptables from admin
+    - You can ssh to the router and change iptables
+    - https://wiki.dd-wrt.com/wiki/index.php/Firewall_Builder
+  - pfSense
 
 ## Anti-Virus and End-Point-Protection
 - Comparatives
