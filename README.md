@@ -582,6 +582,10 @@ IPV6=no
     - You can ssh to the router and change iptables
     - https://wiki.dd-wrt.com/wiki/index.php/Firewall_Builder
   - pfSense
+    - This could replace your router or act as your router as well.
+    - You can install intrusion detection intrusion prevention like snot.
+    - It can be used to isolate your network so you can have trusted and trusted devices.
+    - You can have virtual lands and it can act as a VPN client or a VPN server.
 
 ## Anti-Virus and End-Point-Protection
 - Comparatives
