@@ -90,6 +90,34 @@ Live Rescue Operating Systems, CDs, and USBs
   - eScan rescue disk
   - DrWeb Live 
 
+Windows Sysinternals
+- Process Explorer
+  - https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer
+  - choco install -y procexp
+  - run as administrator
+ - Proces Color:
+    - Purple Proces color indicates an image that is packed. This means that it's either encrypted or compressed on disk and loaded into memory. Malware commonly uses packing to make antivirus signature matching more difficult.
+    - Blue processes are running in the same security context as Proces Explorer.
+    - Pink processes, these host windows services
+  - Combination of suspicion signs:
+    - any process that has no icon should be immediately suspicious.
+    - If it doesn't have a description, that's a little unusual.
+    - It should have a company name. Otherwise, it's a little bit suspicious
+    - Right Click > properties: if it has no versioning, that is another sign of it potentially being suspicious.
+    - Right Click > properties: And you can look at build time as well. If the bill time is very, very recent, that's another potential indicator of something suspicious.
+    - Right Click > properties > Verify: does it have a digital signature. digitally sign verifying who the developer is. most malware is not signed. Verify All: Right Click > Select Columns > Verified Signer | Options > Verify Image Signatures
+    - Right Click > Select Columns > Verified Signer | Options > Virustotal: Unknown or Flagged as malware on Virustotal 
+    - Right Click > Select Columns > Autostart Location | Properties: File lives or starts in an unusual place, like, for example, the Windows directory or a user profile. But malware often installs itself in the user area because you don't need admin rights to do that.
+    - Look in rundll32.exe and svchost.exe for Not Verified Signer or Virustotal Flag or Unknown
+    - Right Click > properties > Strings > Memory > Find (http) : another sign of a suspicious fire is a strange you are, or the odd things that are hidden in the strings.
+    - Right Click > Search Online
+    - Find Windows protesters drug over windows. If we press on that and then we go to some application, it will take us to the process that is actually running it.
+    - Right Click > properties > TCP/IP: Look the Remote Address. So if I go to domaintools.com as an example, the site I can look up, what is that site. They're not going to communicate back to themselves their real IP. Usually what happens is they have taken over some other machine or server and they are using that as a command and control. And we can do a reverse IP lookup which tells us some more domains are going on there.
+    - If you see IRC (Internet relay chat) any point in terms of traffic or networks, then absolutely it's very, very likely to be some sort of command and control over malware. People use Internet relay chat rooms as a way of anonymously commanding and controlling malware.
+    - If you have found a bad process or suspicious file, you need to know how that process is maintaining persistence when it's rebooted, how is it again starting itself you want to look at the auto start Right Click > properties > Image > Autostart Location > Explore > remove suspicious file: So if this was a suspicious file, we would want to remove this link out of here. If you have found where it is started, then what you want to do is right click on here and you want to suspend all instances of the file. Right Click > Kill Process or Process Tree
+
+
+
 
 
 
