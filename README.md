@@ -65,24 +65,23 @@ If you're struggling to even download tools via the browser:
 - Linux: sudo apt install or wget
 
 Live Rescue Operating Systems, CDs, and USBs
-https://www.technorms.com/8098/create-windows-7-live-cd
-
-https://www.aioboot.com/en/gandalfs-windows-10pe/
-
-https://www.hirensbootcd.org/download/
-https://falconfour.wordpress.com/tag/f4ubcd/
-https://www.system-rescue.org/Download/
-https://trinityhome.org/
-
+- Create your own:
+  - https://www.technorms.com/8098/create-windows-7-live-cd
+- Multiboot USB:
+  - https://www.aioboot.com/en/gandalfs-windows-10pe/
+- For Pros:
+  - https://www.hirensbootcd.org/download/
+  - https://falconfour.wordpress.com/tag/f4ubcd/
+  - https://www.system-rescue.org/Download/
+  - https://trinityhome.org/
+- List: 
+  - https://livecdlist.com/
+- Malware, forensics, operating systems
+  - https://remnux.org/
+  - https://www.sans.org/tools/sift-workstation/
+  - 
 ![Screenshot 2021-08-18 at 14 36 34](https://user-images.githubusercontent.com/87951795/129899199-9c36da4e-7f72-463a-9058-533f1c2124c4.png)
-
-https://www.kaspersky.es/downloads/thank-you/free-rescue-disk
-
-
-
-
-
-
+- https://www.kaspersky.es/downloads/thank-you/free-rescue-disk
 
 
 
