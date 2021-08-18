@@ -37,16 +37,32 @@ https://www.bleepingcomputer.com/download/farbar-recovery-scan-tool/
 ![Screenshot 2021-08-18 at 13 20 49](https://user-images.githubusercontent.com/87951795/129889512-8c7914d5-d4e1-45c1-bef0-d23e5db461ba.png)
 - This Fix list needs to be saved in the same location that the tool is saved in. Then copy and past the entry from whitelisted.
 
+Automated Malware Removal Tools:
+- 1st: https://www.hitmanpro.com/en-us
+- 2st: https://www.malwarebytes.com/
+- 3st: https://support.kaspersky.com/kvrt2020
+- extra: https://www.superantispyware.com/
+- extra: https://www.adlice.com/roguekiller/
+- Rootkit Scanner and Removal Tool:
+  - https://www.avast.com/c-rootkit-scanner-tool
+  - https://usa.kaspersky.com/downloads/tdsskiller
+  - https://www.malwarebytes.com/antirootkit
+- AdwCleaner: https://toolslib.net/downloads/viewdownload/1-adwcleaner/
+- Free Tools: https://www.bleepingcomputer.com/download/windows/security/
 
+If you are having trouble running the tools:
+- One option for you to do in Windows is you can boot into safe mode.
+- If that doesn't work, you can try Archil this attempts to kill known malware processes to allow you to run the malware removal software.
+  - https://www.bleepingcomputer.com/download/rkill/
 
-
-
-
-
-
-
-
-
+If you're struggling to even download tools via the browser:
+- Windows: https://chocolatey.org/ 
+  - (https://community.chocolatey.org/packages)
+  - choco install -y malwarebytes
+  - choco install -y wget
+- Mac: https://brew.sh/
+  - brew install wget
+- Linux: sudo apt install or wget
 
 
 
