@@ -9,6 +9,7 @@ Cyber defense tools and techniques
     <img src="https://user-images.githubusercontent.com/87951795/128604224-d694357c-f8e3-4493-a850-d7ae000dff20.png" alt="animated" />
 </p>
 
+The Linux security blog about Auditing, Hardening, and Compliance https://linux-audit.com/
 
 ## Find and remove malware
 Online approach would be when the system is running.  
@@ -123,7 +124,6 @@ Windows Sysinternals
 
 
 
-The Linux security blog about Auditing, Hardening, and Compliance https://linux-audit.com/
 
 ## Security Linux distribution
 - Network Security Toolkit (NST)
