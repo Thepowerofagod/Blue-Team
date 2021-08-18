@@ -40,7 +40,7 @@ https://www.bleepingcomputer.com/download/farbar-recovery-scan-tool/
 Automated Malware Removal Tools:
 - 1st: https://www.hitmanpro.com/en-us
 - 2st: https://www.malwarebytes.com/
-- 3st: https://support.kaspersky.com/kvrt2020
+- 3st: https://support.kaspersky.com/kvrt2020 mirror https://www.kaspersky.es/downloads/thank-you/free-virus-removal-tool
 - extra: https://www.superantispyware.com/
 - extra: https://www.adlice.com/roguekiller/
 - Rootkit Scanner and Removal Tool:
@@ -63,6 +63,29 @@ If you're struggling to even download tools via the browser:
 - Mac: https://brew.sh/
   - brew install wget
 - Linux: sudo apt install or wget
+
+Live Rescue Operating Systems, CDs, and USBs
+https://www.technorms.com/8098/create-windows-7-live-cd
+
+https://www.aioboot.com/en/gandalfs-windows-10pe/
+
+https://www.hirensbootcd.org/download/
+https://falconfour.wordpress.com/tag/f4ubcd/
+https://www.system-rescue.org/Download/
+https://trinityhome.org/
+
+![Screenshot 2021-08-18 at 14 36 34](https://user-images.githubusercontent.com/87951795/129899199-9c36da4e-7f72-463a-9058-533f1c2124c4.png)
+
+https://www.kaspersky.es/downloads/thank-you/free-rescue-disk
+
+
+
+
+
+
+
+
+
 
 
 
