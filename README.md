@@ -10,6 +10,46 @@ Cyber defense tools and techniques
 </p>
 
 
+## Find and remove malware
+Online approach would be when the system is running.  
+Offline approach. This is when the system is not active and the threat itself its code is not running. (Boot off the live CD or mounting it in a different machine).  
+Hybrid approach where you clone the system that you suspect as a threat on it and you place that within a virtual machine.  
+
+Clean the system:  
+1. Wiped the system completely and the operating system reinstalled and then the data restored from backup.  
+2. System Clean. Remove the threat by deleting the executables that make up the malware and preventing it from being persistent on the system.  
+
+Online Help:
+- https://www.malwareremoval.com/forum/
+- https://www.bleepingcomputer.com/forums/
+
+Windows: 
+Farbar Recovery Scan Tool: Diagnose malware issues
+https://www.bleepingcomputer.com/download/farbar-recovery-scan-tool/
+
+- You want to disable any security software before you run this or otherwise that might cause interference.
+- Run this under administrative privileges.
+- This will produce two files Addition.txt and FRST.txt check addition.txt too
+    - These are essentially a snapshot of what your system looks like at this point in time.
+ - FRST.txt This is a list of items that could be potentially suspicious.
+    - whitelisted items that it thinks may need further investigation.
+    - Internet (whitelisted): Internet now, if we look here, we have a registry entry for the names of the DNS server [NameServer]. Now, this is actually an example of a sign of real malware, real malware infection. And what we can see this malware has done is it's changed the DNS server. So essentially it has full control because everywhere you go to it, you can control where it is that you're going. So when he wanted to go to Google instead of return the IP address of Google, it would return the IP address of something else. It looks similar to it, or it would bring up Google and bring up another page as well, that sort of thing.
+![Screenshot 2021-08-18 at 13 20 49](https://user-images.githubusercontent.com/87951795/129889512-8c7914d5-d4e1-45c1-bef0-d23e5db461ba.png)
+- This Fix list needs to be saved in the same location that the tool is saved in. Then copy and past the entry from whitelisted.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 The Linux security blog about Auditing, Hardening, and Compliance https://linux-audit.com/
 
 ## Security Linux distribution
