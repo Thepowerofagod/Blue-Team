@@ -135,9 +135,30 @@ Windows Sysinternals
   - Right Click > Properties: if it has no versioning, that is another sign of it potentially being suspicious. When was it made? New malware will have been made recently
   - Right Click > Search Online
   - If you have an idea of when you infected, the time stamp column can be useful. You don't want to have a look for the date and time for which you think you are infected and not for the auto start around that time.
-  - It's generally better to uncheck than delete to just in case you have found something that's actually legitimate. Only delete it when you're sure things aren't malware, but you're not going to be using all the time, they don't need to start up and be a memory either.
+  - It's generally better to uncheck than delete to just in case you have found something that's actually legitimate. Only delete it when you're sure things aren't malware, but you're not going to be using all the time, they don't need to start up and be a memory either. 
+  - Registry Editor > HKEY_LOCAL_MACHINE > SOFTWARE > Microsoft > Windows > CurrentVersion > RunOnce: It can be used as a mechanism for persistence. Because what the malware can do is it can add itself to this at shut down then and restart the run once then the entry is removed so you won't see it. This is a common, crafty little trick of malware.
 
-Registry Editor > HKEY_LOCAL_MACHINE > SOFTWARE > Microsoft > Windows > CurrentVersion > RunOnce
+- Process Monitor:
+  - https://docs.microsoft.com/en-us/sysinternals/downloads/procmon
+  - Run it as administrator.
+  - you can think of process monitor, like process explorer, but additionally it monitors and keeps a log of all the activity that is going on in the system while it is running. And you can then use filters to go through and determine what events may be causing problems.
+  - Filter or Right Click > Filter
+  - Filter > Category is Write then Include: Now will be able to see any malware making modifications to the system
+  - Tools > Proces Tree: This shows all the processes similar to process explorer, but over time sees everything, not just active processes.
+  - Options > Enable Boot Loggin | Filter > Path Contains runonce then include: If you want to see what it's doing at boot time, save an auto start keeps coming back and you want to check what is wrong or even if the RunOne is being used.
+
+
+netstat -ao [-n address and ports numbers in numeric format.]
+netstat -ob
+Concentrate on is the end point. The location where is actually connecting to. WIN-RGCA7VEPO57 are all internal network names.
+So they're less of an issue, less to worry about.
+But when we look at things like this stackoverflow.com, that is an external server.
+So any external connections there you want to be concerned about
+
+So, for example, if we have decided that this conection is unusual, we need to follow through on that connection.
+We need to trace any connections back to the process and process id that is causing the traffic and
+then use tools like process explorer auto runs and process monitor, which we've just previously cover
+to investigate and remove the persistance that might be associated with that if it is indeed malware.
 
 
 
