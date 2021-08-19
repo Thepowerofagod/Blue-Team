@@ -201,7 +201,29 @@ Linux:
     - Queri the scap file
       - sysdig -r [file].scap -c topprocs_cpu
       - sysdig -r [file].scap -c topprocs_net
-
+- csysdig:
+  - csysdig
+  - csysdig -d 5000 
+  - csysdig -r [file].scap
+  - Views
+    - Connections: We can see the commands that were used in order to generate that traffic so we can look for anything particularly unusual there like revers shell. Select Proces and pres F5, I can see a readable buffer. So if I do another view now, you can see the views different this time when I'm pressing F2, because my view is based on what I'm currently filtered on. Python has been used to do a DNS lookup on demo station X, If I go back, if I look at the connection to the demo station X click on F5 again to do a echo. We can see here what happened on this reverse shell.
+        - F4 to filter like Python
+        - F6 Sysdig output
+    - Spy Syslog: So this will show entries written to syslog that can be quite useful.
+    - Spy User: The result is the display of all user activity sorted by time.
+    - Directories: this view list directories that were accessed on the file system, you can sort that in various different ways.
+    - Files: list the files that were accessed on the file system.
+    - Porcesses: press enter, we can see the threads there. Navigate back by pressing the backspace. use F5 proc self stat or F4 filter to find Python
+- debsums:
+  - You can check the MD5 of your system files against the hashes in the respective repos.
+  - sudo apt install debsums
+  - sudo debsums -ac
+  - So they we see one file there that could be something suspicious, but often its a broken package, but there might be something you want to check into as it has an invalid hash against its respective repo.
+- Unhide:
+  - Detecting hidden processes. Implements six techniques.
+  - https://www.unhide-forensics.info/?Linux
+  - sudo apt install unhide
+  - unhide brute
 
 ## Security Linux distribution
 - Network Security Toolkit (NST)
