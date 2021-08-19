@@ -160,9 +160,47 @@ Windows Sysinternals
     - bandwidth monitoring and network connection monitoring
     - https://www.softperfect.com/products/networx/
 
+Linux:
+- Comon Admin Tools (they are not the most effective way):
+  - ps
+  - top
+  - htop
+  - pstree
+  - strace
+  - dtrace
+  - netstat
+  - Isof
+  - tcpdump
 
-
-
+- Sysdig & Sysdig Inspect: 
+    - Is a tool for capturing system events, filtering those events and also being able to apply scripts to the events that you've captured.
+    - To use Sysdig Inspect, you need capture files collected on Linux with sysdig.
+    - https://github.com/draios/sysdig
+    - https://github.com/draios/sysdig-inspect
+    - sudo apt install curl
+    - Install: https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-for-Linux
+    - Documentation: https://github.com/draios/sysdig/wiki
+    - sysdig
+    - sysdig proc.name=ssh
+    - Run a script now to look for the top processes in terms of network bandwidth and usage
+      - sysdig -c topprocs_net
+      - A machine that had some sort of remote command and control, we would see activity popping up here
+    - top processes by CPU
+      - sysdig -c topprocs_cpu
+      - it's possible to hide processes from appearing. When you use tools such as ps or htop. Sysdig does not suffer from this issue because it takes all of the information from the system calls.
+    - Maybe you want to see what directories the user route has been accessing.
+      - sysdig -p"%evt.arg.path" "evt.type=chdir and user.name=root"
+    - Checking out to see whether there's any activity on the Path.
+      - sysdig fd.name contains [/PATH/]
+    - Maybe we just want to look at the open files in directory
+      - sysdig evt.type=open and fd.name contains [PATH] (only)
+    - Captur to file (Start Captur)
+      - sysdig -qw [file].scap 
+    - Compress the capture as we're capturing it
+      - sysdig -s 4096 -z -w [file].scap.gz
+    - Queri the scap file
+      - sysdig -r [file].scap -c topprocs_cpu
+      - sysdig -r [file].scap -c topprocs_net
 
 
 ## Security Linux distribution
