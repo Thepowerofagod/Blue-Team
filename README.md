@@ -116,12 +116,10 @@ Windows Sysinternals
     - Right Click > properties > TCP/IP: Look the Remote Address. So if I go to domaintools.com as an example, the site I can look up, what is that site. They're not going to communicate back to themselves their real IP. Usually what happens is they have taken over some other machine or server and they are using that as a command and control. And we can do a reverse IP lookup which tells us some more domains are going on there.
     - If you see IRC (Internet relay chat) any point in terms of traffic or networks, then absolutely it's very, very likely to be some sort of command and control over malware. People use Internet relay chat rooms as a way of anonymously commanding and controlling malware.
     - If you have found a bad process or suspicious file, you need to know how that process is maintaining persistence when it's rebooted, how is it again starting itself you want to look at the auto start Right Click > properties > Image > Autostart Location > Explore > remove suspicious file: So if this was a suspicious file, we would want to remove this link out of here. If you have found where it is started, then what you want to do is right click on here and you want to suspend all instances of the file. Right Click > Kill Process or Process Tree
-
 - Sigcheck:
   - https://docs.microsoft.com/en-us/sysinternals/downloads/sigcheck
   - unsign files are a sign of a suspicious file because we have no verification of its authenticity and its author.
   - sigcheck -s -u -e -vrs C:\windows\system32
-
 - Autoruns:
   - https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns
   - It shows every place in the system that can be configured to run something at Boot or log in time. It shows the locations where malware can maintain persistence on a system
@@ -137,7 +135,6 @@ Windows Sysinternals
   - If you have an idea of when you infected, the time stamp column can be useful. You don't want to have a look for the date and time for which you think you are infected and not for the auto start around that time.
   - It's generally better to uncheck than delete to just in case you have found something that's actually legitimate. Only delete it when you're sure things aren't malware, but you're not going to be using all the time, they don't need to start up and be a memory either. 
   - Registry Editor > HKEY_LOCAL_MACHINE > SOFTWARE > Microsoft > Windows > CurrentVersion > RunOnce: It can be used as a mechanism for persistence. Because what the malware can do is it can add itself to this at shut down then and restart the run once then the entry is removed so you won't see it. This is a common, crafty little trick of malware.
-
 - Process Monitor:
   - https://docs.microsoft.com/en-us/sysinternals/downloads/procmon
   - Run it as administrator.
@@ -146,23 +143,25 @@ Windows Sysinternals
   - Filter > Category is Write then Include: Now will be able to see any malware making modifications to the system
   - Tools > Proces Tree: This shows all the processes similar to process explorer, but over time sees everything, not just active processes.
   - Options > Enable Boot Loggin | Filter > Path Contains runonce then include: If you want to see what it's doing at boot time, save an auto start keeps coming back and you want to check what is wrong or even if the RunOne is being used.
-
 - Network Connections: 
   - netstat -ob [-n address and ports numbers in numeric format. -a All conections]
     - Concentrate on is the end point. The location where is actually connecting to. WIN-RGCA7VEPO57 are all internal network names. So they're less of an issue, less to worry about. But when we look at things like this stackoverflow.com, that is an external server. So any external connections there you want to be concerned about
     - So, for example, if we have decided that this conection is unusual, we need to follow through on that connection. We need to trace any connections back to the process and process id that is causing the traffic and then use tools like process explorer auto runs and process monitor, which we've just previously cover to investigate and remove the persistance that might be associated with that if it is indeed malware.
-
     - If this was some executable that you didn't know, particularly what it was and it was going somewhere that you didn't particularly know where that was. And then you use process explorer and you find out it is unsigned. You know, these are suspicious things.
-
   - TCPView (GUI netstat)
     - https://docs.microsoft.com/en-us/sysinternals/downloads/tcpview
     - Run as Administrator
     - We can do a Whois (who owns the end point)
-
   - Unhide (Windows and Linux):
     - https://www.unhide-forensics.info/
     - Is a forensic tool to find processes TCP and UDP port hidden by rootkits it will search for hidden processes and hidden TCP IP connections, if there is anything that it is a sign of a rootkit.
     - And again, obviously you want to trace unusual connections back to the process that is causing the traffic and then use proces explorer autoruns process monitor to investigate and remove persistence as needed.
+  - NetWorx: Windows, Mac and Linux
+    - bandwidth monitoring and network connection monitoring
+    - https://www.softperfect.com/products/networx/
+
+
+
 
 
 
