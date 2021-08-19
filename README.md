@@ -92,7 +92,7 @@ Live Rescue Operating Systems, CDs, and USBs
   - DrWeb Live 
 
 Windows Sysinternals
-- Process Explorer
+- Process Explorer:
   - https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer
   - choco install -y procexp
   - run as administrator
@@ -117,10 +117,27 @@ Windows Sysinternals
     - If you see IRC (Internet relay chat) any point in terms of traffic or networks, then absolutely it's very, very likely to be some sort of command and control over malware. People use Internet relay chat rooms as a way of anonymously commanding and controlling malware.
     - If you have found a bad process or suspicious file, you need to know how that process is maintaining persistence when it's rebooted, how is it again starting itself you want to look at the auto start Right Click > properties > Image > Autostart Location > Explore > remove suspicious file: So if this was a suspicious file, we would want to remove this link out of here. If you have found where it is started, then what you want to do is right click on here and you want to suspend all instances of the file. Right Click > Kill Process or Process Tree
 
+- Sigcheck:
+  - https://docs.microsoft.com/en-us/sysinternals/downloads/sigcheck
+  - unsign files are a sign of a suspicious file because we have no verification of its authenticity and its author.
+  - sigcheck -s -u -e -vrs C:\windows\system32
 
+- Autoruns:
+  - https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns
+  - It shows every place in the system that can be configured to run something at Boot or log in time. It shows the locations where malware can maintain persistence on a system
+  - We've got some entry that are ticked and unticked. This means that the entry is there, but it is not enabled.
+  - Options > Scan Options > Verify code signatures, Check VirusTotal and Submit unknown images > Rescan
+  - Those processes that don't have digital signatures are obviously potentially some sort of malware.
+  - Colors:
+    - White: the white ones are basically non Microsoft usually.
+    - Yellow: They don't really need to worry about all that means is there's an entry, but the as it says here, the file is not found.
+    - Red: no valid digital signature, so the red ones need to be looked at.
+  - Right Click > Properties: if it has no versioning, that is another sign of it potentially being suspicious. When was it made? New malware will have been made recently
+  - Right Click > Search Online
+  - If you have an idea of when you infected, the time stamp column can be useful. You don't want to have a look for the date and time for which you think you are infected and not for the auto start around that time.
+  - It's generally better to uncheck than delete to just in case you have found something that's actually legitimate. Only delete it when you're sure things aren't malware, but you're not going to be using all the time, they don't need to start up and be a memory either.
 
-
-
+Registry Editor > HKEY_LOCAL_MACHINE > SOFTWARE > Microsoft > Windows > CurrentVersion > RunOnce
 
 
 
