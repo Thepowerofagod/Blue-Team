@@ -147,19 +147,22 @@ Windows Sysinternals
   - Tools > Proces Tree: This shows all the processes similar to process explorer, but over time sees everything, not just active processes.
   - Options > Enable Boot Loggin | Filter > Path Contains runonce then include: If you want to see what it's doing at boot time, save an auto start keeps coming back and you want to check what is wrong or even if the RunOne is being used.
 
+- Network Connections: 
+  - netstat -ob [-n address and ports numbers in numeric format. -a All conections]
+    - Concentrate on is the end point. The location where is actually connecting to. WIN-RGCA7VEPO57 are all internal network names. So they're less of an issue, less to worry about. But when we look at things like this stackoverflow.com, that is an external server. So any external connections there you want to be concerned about
+    - So, for example, if we have decided that this conection is unusual, we need to follow through on that connection. We need to trace any connections back to the process and process id that is causing the traffic and then use tools like process explorer auto runs and process monitor, which we've just previously cover to investigate and remove the persistance that might be associated with that if it is indeed malware.
 
-netstat -ao [-n address and ports numbers in numeric format.]
-netstat -ob
-Concentrate on is the end point. The location where is actually connecting to. WIN-RGCA7VEPO57 are all internal network names.
-So they're less of an issue, less to worry about.
-But when we look at things like this stackoverflow.com, that is an external server.
-So any external connections there you want to be concerned about
+    - If this was some executable that you didn't know, particularly what it was and it was going somewhere that you didn't particularly know where that was. And then you use process explorer and you find out it is unsigned. You know, these are suspicious things.
 
-So, for example, if we have decided that this conection is unusual, we need to follow through on that connection.
-We need to trace any connections back to the process and process id that is causing the traffic and
-then use tools like process explorer auto runs and process monitor, which we've just previously cover
-to investigate and remove the persistance that might be associated with that if it is indeed malware.
+  - TCPView (GUI netstat)
+    - https://docs.microsoft.com/en-us/sysinternals/downloads/tcpview
+    - Run as Administrator
+    - We can do a Whois (who owns the end point)
 
+  - Unhide (Windows and Linux):
+    - https://www.unhide-forensics.info/
+    - Is a forensic tool to find processes TCP and UDP port hidden by rootkits it will search for hidden processes and hidden TCP IP connections, if there is anything that it is a sign of a rootkit.
+    - And again, obviously you want to trace unusual connections back to the process that is causing the traffic and then use proces explorer autoruns process monitor to investigate and remove persistence as needed.
 
 
 
