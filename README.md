@@ -225,6 +225,26 @@ Linux:
   - sudo apt install unhide
   - unhide brute
 
+
+Any connection that you don't understand or aren't quite sure what it is should be traced back to the
+process to confirm whether or not it is genuine or not. And then the end points. You're not sure what they are.
+Check out that IP address. See where it is. Find out whether you should be making connections to that remote address.
+
+Native Tools
+- netstat 
+  - see the continuous established connections
+    - netstat -atp | grep ESTA
+- lsof
+  - lsof -P -i
+  - lsof -P -i | grep EST
+
+NMAP
+- But using and Nmap is another way of being sure that something is actually open. Another way to potentially find something that might be hidden.
+  - nmap -p1-65535 localhost
+
+
+
+
 ## Security Linux distribution
 - Network Security Toolkit (NST)
   - https://sourceforge.net/projects/nst/?source=recommended
