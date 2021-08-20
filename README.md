@@ -242,7 +242,39 @@ NMAP
 - But using and Nmap is another way of being sure that something is actually open. Another way to potentially find something that might be hidden.
   - nmap -p1-65535 localhost
 
-
+Automated Linux tools for finding and removing malware and rootkit
+- AV-Comparatives: https://www.av-comparatives.org/wp-content/uploads/2015/05/avc_linux_2015_en.pdf
+- Linux Malware: https://en.wikipedia.org/wiki/Linux_malware
+- rkhunter
+  - apt install rkhunter
+  - rkhunter --update
+  - rkhunter --version
+  - rkhunter can alert us if any of the essential configuration files that it tracks is changed in any way. We need to tell rkhunter to check the current values and store them as known good values in its database.
+    - rkhunter --propupd
+  - Scan
+    - rkhunter -c --enable all --disable none 
+    - show only the warnings
+    - rkhunter -c --enable all --disable none --rwo
+  - common non-issue
+![Screenshot 2021-08-20 at 12 40 44](https://user-images.githubusercontent.com/87951795/130221759-4e115fed-f992-4694-92a7-62941933908e.png)
+  - we need to whitelist them out so that we're not warned again 
+    - nano /etc/rkhunter.conf
+      - Search .java [ALLOWHIDENDIR] uncoment
+      - Search dhclient [ALLOWHIDENDIR] uncoment
+      - Search shm [ALLOWHIDENDIR] uncoment
+      - Or set up email to get notifications search MAIL-ON-WARNING
+  - checked if a configuration is valid
+    - rkhunter -C
+  - and then we'd want to run it again to make sure that we got no warnings.
+    - rkhunter -c --enable all --disable none --rwo
+  - And when we're at our baseline, we want to run this again as that is where we want the system to be
+    - rkhunter --propupd
+- https://www.clamav.net/
+- https://www.nongnu.org/tiger/
+- https://www.rfxn.com/projects/linux-malware-detect/
+  - https://www.2daygeek.com/install-configure-linux-malware-detect-lmd-on-linux/
+- chkrootkit (web problems)
+  - sudo apt install chkrootkit
 
 
 ## Security Linux distribution
