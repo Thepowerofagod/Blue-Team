@@ -276,6 +276,25 @@ Automated Linux tools for finding and removing malware and rootkit
 - chkrootkit (web problems)
   - sudo apt install chkrootkit
 
+- Mac
+  - https://objective-see.com
+  - TaskExplorer: https://objective-see.com/products/taskexplorer.html (Like Proces Explorer form Sys)
+    - Green padlock means that it is signed and is signed by Apple.
+    - Black padlock is signed by a third party.
+    - Orange unsigned. Anything that is unsigned obviously needs further investigation.
+    - Filter #unsigned. So of interest to us in terms of malware is anything that is unsigned. And if, for example, you're concerned about this one, you can do a search with Google.
+  - KnockKnock: https://objective-see.com/products/knockknock.html
+    - Allow you to see what persistently installed on your Mac is little like the Windows Autorun tool.
+    - As we know, threats on your Mac, such as malware and hackers, need to maintain persistence on the operating system even after reboot if they want to be, well, useful as malware anyway. To do that, they need to place themselves in any number of locations on your Mac. And with this tool knock, knock, you can scan those locations and examine what is present. And if anything untoward is present, then that can be potentially malware that is attempting to maintain persistence or a hacker.
+  - KextViewr: https://objective-see.com/products/kextviewr.html
+     -  View all modules on that are loaded in the OS kernel. Modules that are loaded into the kernel are called kernel extension, or 'kexts.' They run at the OS's highest privilege level; ring-0. KextViewr displays all loaded kexts, along with their signing status, full path, VirusTotal detection ratios, and more! 
+     -  With this tool, we want to look for unsigned, unknown and detected as malware kernel extensions
+     -  We'd be looking out for the orange padlocked (Unsigned) Filter #Unsigned
+  - BlockBlock: https://objective-see.com/products/blockblock.html
+    - Malware installs itself persistently to ensure it's automatically (re)executed. BlockBlock monitors common persistence locations and alerts whenever a persistent component is added. 
+  - Netiquette: https://objective-see.com/products/netiquette.html
+    - In today's connected world, it is rare to find an application or piece of malware that doesn't talk to a remote server. Netiquette is a network monitor that allows one to explore all network sockets and connections, either via an interactive UI, or from the commandline. 
+    - Pay alternative https://radiosilenceapp.com/ or Little Snitch
 
 ## Security Linux distribution
 - Network Security Toolkit (NST)
