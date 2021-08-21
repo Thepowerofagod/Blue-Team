@@ -1,6 +1,4 @@
-![Screenshot 2021-08-21 at 12 50 53](https://user-images.githubusercontent.com/87951795/130320347-c84d085f-bb43-4dda-a9d4-95a66fd6c87b.png)
-![Screenshot 2021-08-21 at 12 50 53](https://user-images.githubusercontent.com/87951795/130320351-4aa6a224-1f76-4691-8aad-25d4cec2bd15.png)
-![Screenshot 2021-08-21 at 12 50 53](https://user-images.githubusercontent.com/87951795/130320355-1cb208b1-752e-437f-b441-ef9a1f0219c5.png)
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/87951795/127995943-229e5bd5-bfc7-4431-a5ee-c16f5a9233b6.gif" alt="animated" />
 </p>
