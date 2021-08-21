@@ -276,6 +276,42 @@ Automated Linux tools for finding and removing malware and rootkit
 - chkrootkit (web problems)
   - sudo apt install chkrootkit
 
+To remain running after reboot, malware is usually relaunched in some persistance mechanism, as we've
+discussed, this could be in Linux via services, drivers, scheduled tasks, Chron modules and other startup locations.
+- In Debian these can be examined for install packages that shouldn't be there. If we're looking for malware and threats:
+  - tail -20 /var/lib/dpkg/status : Contains inforamtion about installed packeges
+  - tail -20 /var/log/dpkg.log : Records Information when a package is installed
+
+Locations where you need to look for signs of malware trying to maintain persistence
+- The Linux cron job scheduler can be used to periodically execute code. So look for anything that shouldn't be present in any of these.
+  - ls -la /var/spool/cron
+  - crontab -l
+  - nano /etc/crontab
+  - ls -la /etc/cron*
+  - nano /etc/cron.weekly/tor
+
+Creating new services is a common method for malware to gain persistance
+- Get a list of our services  
+  - systemctl list-units -t service --all
+  - systemctl status [Service Name like tor]
+  - csysdig and search for the service
+  - systemctl stop tor
+  - systemctl start tor
+- Let's imagine we have a service that we do not want to be running
+  - systemctl disable cron
+  - systemctl status cron
+  - systemctl stop cron
+  - systemctl enable cron
+- systemctl also has the ability to mark a unit as completely unstartable
+  - systemctl mask cron
+  - systemctl unmask cron
+- What is enable and disable at Start. Look for anything that should not be there.
+  - systemctl list-unit-files --type=service | grep enable
+- You can look at the boot log
+  - journalctl -b
+  - journalctl -u tor
+
+
 - Mac
   - https://objective-see.com
   - TaskExplorer: https://objective-see.com/products/taskexplorer.html (Like Proces Explorer form Sys)
