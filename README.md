@@ -356,8 +356,7 @@ Now, there are some tools that can do that:
 - https://pypi.org/project/uefi-firmware/
 Make sure that you remove private information such as Wi-Fi passwords that might be stored in byas variables. Before uploading to Virustotal
 
-
-End-Point-Protection Recovery and Remediation Technology
+End-Point-Protection Recovery and Remediation Technology:
 Containment approaches. That records all important events and activities, allowing it to undo what an attacker or malware has done.
 - https://bufferzonesecurity.com/
 - https://www.faronics.com/es/products/deep-freeze/standard
@@ -371,8 +370,26 @@ Disk Cloning / Re-imagin / Roll Back
 - https://www.terabyteunlimited.com/products.htm
 - Additionally, you could use snapshots in virtual machine technology, such as with VMware, Virtual Box, Zen Server and Docker
 
-
-
+Encrypted Backup, Cloud Storage and File Syncing:
+- Local on-premises backup
+  - https://www.drobostore.com/
+  - https://www.qnap.com/en/
+- Encrypted Cloud Storage / Self Hosting: The cloud can be used to back up your data to make recovery easier to do and to keep your data separate from your threat.
+  - https://www.seafile.com/en/home/
+    - https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-seafile-on-an-ubuntu-12-04-vps
+  - https://owncloud.com/
+    - https://www.turnkeylinux.org/owncloud
+    - https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-owncloud-on-ubuntu-18-04
+  - https://pydio.com/ (Local NAS or cloud)
+    - https://www.digitalocean.com/community/tutorials/how-to-host-a-file-sharing-server-with-pydio-on-ubuntu-14-04
+  - https://www.tahoe-lafs.org/trac/tahoe-lafs
+    - https://www.digitalocean.com/community/tutorials/tahoe-lafs
+- File Syncing
+  - https://www.sparkleshare.org/
+  - https://www.syncany.org/
+  - https://syncthing.net/
+- Add Client Side Encryption  
+  - https://www.boxcryptor.com/en/
 
 ## Security Linux distribution
 - Network Security Toolkit (NST)
