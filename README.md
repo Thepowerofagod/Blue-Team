@@ -1,3 +1,6 @@
+![Screenshot 2021-08-21 at 12 50 53](https://user-images.githubusercontent.com/87951795/130320347-c84d085f-bb43-4dda-a9d4-95a66fd6c87b.png)
+![Screenshot 2021-08-21 at 12 50 53](https://user-images.githubusercontent.com/87951795/130320351-4aa6a224-1f76-4691-8aad-25d4cec2bd15.png)
+![Screenshot 2021-08-21 at 12 50 53](https://user-images.githubusercontent.com/87951795/130320355-1cb208b1-752e-437f-b441-ef9a1f0219c5.png)
 <p align="center">
   <img src="https://user-images.githubusercontent.com/87951795/127995943-229e5bd5-bfc7-4431-a5ee-c16f5a9233b6.gif" alt="animated" />
 </p>
@@ -311,6 +314,15 @@ Creating new services is a common method for malware to gain persistance
   - journalctl -b
   - journalctl -u tor
 
+![Screenshot 2021-08-21 at 12 50 53](https://user-images.githubusercontent.com/87951795/130320374-8d80bed9-b233-4a27-80d3-c2ab0bc9efc3.png)
+
+The startup script should be investigated for anything untoward that may be trying to maintain persistance.
+Kernel modules can be used to root a system can in modules are loaded at boot time based on the configuration information that is in this area here.
+- /lib/modules/3.16.0-4
+- /etc/modprobe.d
+- /etc/modprobe.com
+
+![Screenshot 2021-08-21 at 13 38 00](https://user-images.githubusercontent.com/87951795/130320531-0260ea8a-02a3-4eb5-98e7-23bc951a99eb.png)
 
 - Mac
   - https://objective-see.com
@@ -331,6 +343,38 @@ Creating new services is a common method for malware to gain persistance
   - Netiquette: https://objective-see.com/products/netiquette.html
     - In today's connected world, it is rare to find an application or piece of malware that doesn't talk to a remote server. Netiquette is a network monitor that allows one to explore all network sockets and connections, either via an interactive UI, or from the commandline. 
     - Pay alternative https://radiosilenceapp.com/ or Little Snitch
+
+Firmware Rootkits 
+![Screenshot 2021-08-21 at 13 49 22](https://user-images.githubusercontent.com/87951795/130320798-f7c70b14-b0d6-4600-80a1-aa5b9ee7ff66.png)
+You will need to extract the firmware from whatever device it is you're wanting to check.
+Now, there are some tools that can do that:
+- Mac:
+  - https://bitbucket.org/blackosx/darwindumper/src/master/
+- Mac, Linux and Windows:
+  - https://github.com/chipsec/chipsec
+  - https://raw.githubusercontent.com/chipsec/chipsec/master/chipsec-manual.pdf
+- https://blackhat.com/docs/us-13/US-13-Butterworth-BIOS-Security-Code.zip
+- https://flashrom.org/Flashrom
+- https://pypi.org/project/uefi-firmware/
+Make sure that you remove private information such as Wi-Fi passwords that might be stored in byas variables. Before uploading to Virustotal
+
+
+End-Point-Protection Recovery and Remediation Technology
+Containment approaches. That records all important events and activities, allowing it to undo what an attacker or malware has done.
+- https://bufferzonesecurity.com/
+- https://www.faronics.com/es/products/deep-freeze/standard
+Disk Cloning / Re-imagin / Roll Back
+- https://horizondatasys.com/
+- https://www.macrium.com/reflectfree
+- MAC: https://bombich.com/ or Time Machine
+- https://www.runtime.org/driveimage-xml.htm
+- https://clonezilla.org/
+- https://www.acronis.com/en-gb/
+- https://www.terabyteunlimited.com/products.htm
+- Additionally, you could use snapshots in virtual machine technology, such as with VMware, Virtual Box, Zen Server and Docker
+
+
+
 
 ## Security Linux distribution
 - Network Security Toolkit (NST)
