@@ -12,6 +12,17 @@ Cyber defense tools and techniques
 
 The Linux security blog about Auditing, Hardening, and Compliance https://linux-audit.com/
 
+## Add a Static ARP Entry to Local ARP Table (Avoid Arp Spoofing)
+Mac & Linux 
+```
+sudo arp -s 10.0.0.2 00:0c:29:c0:94:bf
+```
+Windows 
+```
+New-NetNeighbor -InterfaceIndex 12 -IPAddress '192.168.0.10' -LinkLayerAddress '0000120000ff' -State Permanent
+chek
+Get-NetNeighbor -InterfaceIndex 12 -IPAddress 192.168.0.10
+```
 ## Find and remove malware
 Online approach would be when the system is running.  
 Offline approach. This is when the system is not active and the threat itself its code is not running. (Boot off the live CD or mounting it in a different machine).  
