@@ -23,6 +23,11 @@ New-NetNeighbor -InterfaceIndex 12 -IPAddress '192.168.0.10' -LinkLayerAddress '
 chek
 Get-NetNeighbor -InterfaceIndex 12 -IPAddress 192.168.0.10
 ```
+
+## Checksum 
+Windows:
+- MD5: https://www.winmd5.com/
+
 ## Find and remove malware
 Online approach would be when the system is running.  
 Offline approach. This is when the system is not active and the threat itself its code is not running. (Boot off the live CD or mounting it in a different machine).  
