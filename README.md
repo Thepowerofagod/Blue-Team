@@ -31,7 +31,7 @@ https://www.linuxquestions.org/questions/linux-networking-3/making-arptable-sett
 /etc/NetworkManager/dispatcher.d/
 All scripts in the above folder will be executed every time an interface gets up, as long as you give it executable rights 
 
-1. Option
+1. Option  
 Fill in a flat file, like /etc/ethers, with mappings like :
 ```
  00:11:22:33:44:55  1.2.3.4
@@ -52,7 +52,7 @@ Now, either execute it directly or unplug / plug back in your interface. You sho
 arp -a -n
 ? (172.16.100.254) at 00:15:17:9d:d6:d1 [ether] PERM on eth0
 ```
-2. Option
+2. Option  
 Whenever my Linux workstation gets network connection, I could auto-add a static ARP entry designated with the MAC address of the default gateway as obtained at that moment. (Supposedly, gateway NICs don't just change their MACs afterwards.)
 
 Implemented as something to the like of the following script which can be put into /etc/network/if-{up,down}.d on a Debian-based GNU/Linux (or in /etc/NetworkManager/dispatcher.d wherever that is used):
@@ -80,7 +80,7 @@ case "$MODE" in
         ;;
 esac
 ```
-3. Option
+3. Option  
 ```
 Block ARP traffic from all machines (default: DENY)
 arptables -P INPUT DROP
