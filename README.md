@@ -13,7 +13,7 @@ Cyber defense tools and techniques
 The Linux security blog about Auditing, Hardening, and Compliance https://linux-audit.com/
 
 ## Add a Static ARP Entry to Local ARP Table (Avoid Arp Spoofing)
-Mac & Linux 
+Mac 
 ```
 sudo arp -s 10.0.0.2 00:0c:29:c0:94:bf
 ```
@@ -23,6 +23,82 @@ New-NetNeighbor -InterfaceIndex 12 -IPAddress '192.168.0.10' -LinkLayerAddress '
 chek
 Get-NetNeighbor -InterfaceIndex 12 -IPAddress 192.168.0.10
 ```
+Linux:
+https://archive.phocean.net/2015/08/14/quick-tip-harden-your-arp-table-the-easy-way-linux.html
+https://security.stackexchange.com/questions/101849/prevent-arp-spoofing-with-dynamic-static-entry-on-linux
+https://www.linuxquestions.org/questions/linux-networking-3/making-arptable-settings-persist-through-reboots-in-centos-7-a-4175624722/
+
+/etc/NetworkManager/dispatcher.d/
+All scripts in the above folder will be executed every time an interface gets up, as long as you give it executable rights 
+
+1. Option
+Fill in a flat file, like /etc/ethers, with mappings like :
+```
+ 00:11:22:33:44:55  1.2.3.4
+```
+Now, NetworkManager will do all the magic.
+Create a script like :
+```
+cat /etc/NetworkManager/dispatcher.d/40-arp 
+#!/bin/bash
+arp -f /etc/ethers
+```
+All scripts in the above folder will be executed every time an interface gets up, as long as you give it executable rights :
+```
+chmod +x /etc/NetworkManager/dispatcher.d/40-arp
+```
+Now, either execute it directly or unplug / plug back in your interface. You should have a permanent static MAC address now, effectively bypassing the ARP protocol and its weaknesses :
+```
+arp -a -n
+? (172.16.100.254) at 00:15:17:9d:d6:d1 [ether] PERM on eth0
+```
+2. Option
+Whenever my Linux workstation gets network connection, I could auto-add a static ARP entry designated with the MAC address of the default gateway as obtained at that moment. (Supposedly, gateway NICs don't just change their MACs afterwards.)
+
+Implemented as something to the like of the following script which can be put into /etc/network/if-{up,down}.d on a Debian-based GNU/Linux (or in /etc/NetworkManager/dispatcher.d wherever that is used):
+```
+#!/bin/sh
+
+# If not Debian, account for NetworkManager's dispatcher.d
+IFACE="${IFACE:-$1}" MODE="${MODE:-$2}"
+
+# Support eth/wlan/wwan interfaces
+case "$IFACE" in en*|eth*|wl*|ww*) ;; *) exit 0; esac
+
+neighbors="/run/ifup.$(basename "$0").$IFACE"
+
+case "$MODE" in
+    start|*up*)
+        sleep 6
+        arp -an -i "$IFACE" | cut -d' ' -f 2,4 | tr -d '()' > "$neighbors"
+        while read host hwaddr; do arp -s $host $hwaddr; done < "$neighbors"
+        ;;
+    stop|*down*)
+        [ ! -f "$neighbors" ] && exit 0
+        while read host _hwaddr; do arp -d $host; done < "$neighbors"
+        rm "$neighbors"
+        ;;
+esac
+```
+3. Option
+```
+Block ARP traffic from all machines (default: DENY)
+arptables -P INPUT DROP
+
+Allow router (fixed ARP)
+arptables -A INPUT --source-mac d8:d7:21:22:5a:f4 -j ACCEPT
+```
+
+https://www.blackhat.com/presentations/bh-europe-03/bh-europe-03-valleri.pdf
+
+
+completely-disable-internal-mic-and-webcam
+https://askubuntu.com/questions/146654/how-can-i-completely-disable-internal-mic-and-webcam
+
+gui-apps-without-a-graphical-desktop
+https://superuser.com/questions/503343/gui-apps-without-a-graphical-desktop
+https://superuser.com/questions/493319/can-i-have-graphics-on-linux-without-a-desktop-manager
+
 
 ## Checksum 
 Windows:
